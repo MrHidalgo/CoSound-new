@@ -1,5 +1,245 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+	padding-top: 81px;
+	padding-bottom: 48px;
+	background-color: #191919;
+
+	.c-grid {
+		max-width: 1170px;
+	}
+
+	&__wrapper {
+		&-1 {
+			display: flex;
+			padding-bottom: 70px;
+			@include adaptive(1023) {
+				flex-wrap: wrap;
+				padding-bottom: 35px;
+			}
+
+			> div {
+				&:nth-of-type(1) {
+					width: 100%;
+					max-width: 410px;
+					padding-right: 50px;
+					@include adaptive(1279) {
+						max-width: 330px;
+						padding-right: 30px;
+					}
+					@include adaptive(1023) {
+						max-width: 50%;
+					}
+					@include adaptive(767) {
+						max-width: 100%;
+						padding-right: 0;
+						padding-bottom: 50px;
+					}
+				}
+				&:nth-of-type(2) {
+					width: 100%;
+					max-width: 274px;
+					@include adaptive(1023) {
+						max-width: 50%;
+						padding-left: 15px;
+					}
+					@include adaptive(767) {
+						max-width: 100%;
+						padding-left: 0;
+					}
+				}
+				&:nth-of-type(3) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding-left: 96px;
+					@include adaptive(1279) {
+						padding-left: 50px;
+					}
+					@include adaptive(1023) {
+						width: 100%;
+						padding-left: 0;
+						padding-top: 50px;
+					}
+				}
+			}
+		}
+
+		&-2 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-top: 26px;
+			border-top: 1px solid rgba(255,255,255,0.15);
+			@include adaptive(767) {
+				flex-direction: column-reverse;
+				padding-top: 48px;
+			}
+
+			> div {
+				&:nth-of-type(1),
+				&:nth-of-type(2) {
+					@include adaptive(1023) {
+						width: 50%;
+					}
+					@include adaptive(767) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: 25px;
+		@extend %fontAndaleMonoMTStd;
+		font-size: 16px;
+		color: #F0AF37;
+		@include adaptive(767) {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		padding-bottom: 35px;
+		font-size: 14px;
+		color: #A8A8AA;
+		@include adaptive(767) {
+			text-align: center;
+		}
+	}
+
+	&__nav {
+		&-wrapper {
+			display: flex;
+
+			> div {
+				width: 50%;
+			}
+		}
+
+		&-item {
+			display: flex;
+			@include adaptive(767) {
+				justify-content: center;
+
+				&:not(:last-of-type) {
+					padding-bottom: 10px;
+				}
+			}
+
+			a {
+				position: relative;
+				display: flex;
+				font-weight: bold;
+				font-size: 14px;
+				color: #FFFFFF;
+				line-height: 28px;
+				@include transition(color);
+
+				&:before,
+				&:after {
+					opacity: 0;
+					visibility: hidden;
+					z-index: 0;
+					display: inline-block;
+					vertical-align: middle;
+					backface-visibility: hidden;
+					@include transition(opacity, visibility, transform);
+				}
+
+				&:before {
+					content: '[';
+					transform: translateX(5px);
+				}
+				&:after {
+					content: ']';
+					transform: translateX(-5px);
+				}
+
+				&:hover {
+					color: #a8a8aa;
+					@include transition(color);
+
+					&:before,
+					&:after {
+						opacity: 1;
+						visibility: visible;
+						@include transition(opacity, visibility);
+					}
+
+					&:before {
+						transform: translateX(-10px);
+						@include transition(transform);
+					}
+					&:after {
+						transform: translateX(10px);
+						@include transition(transform);
+					}
+				}
+			}
+		}
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		@include adaptive(1023) {
+			justify-content: flex-end;
+		}
+		@include adaptive(767) {
+			justify-content: center;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+
+			&:not(:last-of-type) {
+				margin-right: 9px;
+			}
+
+			a,
+			span {
+				font-size: 12px;
+				color: #A8A8AA;
+			}
+
+			a {
+				position: relative;
+				@include transition(color);
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					top: 100%;
+					width: 0;
+					height: 1px;
+					background-color: #a8a8aa;
+					@include transition(width);
+				}
+
+				&:before {
+					left: 50%;
+				}
+				&:after {
+					right: 50%;
+				}
+
+				&:hover {
+					color: #ffffff;
+					@include transition(color);
+
+					&:before,
+					&:after {
+						width: 50%;
+						@include transition(width);
+					}
+				}
+			}
+		}
+	}
+}
 
 // FOOTER :: END

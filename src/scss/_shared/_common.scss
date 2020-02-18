@@ -1,3 +1,120 @@
 // COMMON :: START
 
+.copyright {
+	&__text {
+		font-size: 12px;
+		color: #A8A8AA;
+		@include adaptive(767) {
+			text-align: center;
+			padding-top: 48px;
+		}
+	}
+}
+
+.follow {
+	&__title {
+		padding-bottom: 15px;
+		font-weight: bold;
+		font-size: 14px;
+		color: #A8A8AA;
+		@include adaptive(767) {
+			text-align: center;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		@include adaptive(767) {
+			justify-content: center;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 45px;
+			height: 45px;
+			border-radius: 2px;
+			background-color: rgba(255,255,255,0.15);
+			@include transition(border-radius, background-color);
+
+			&:not(:last-of-type) {
+				margin-right: 12px;
+			}
+
+			&:hover {
+				border-radius: 50%;
+				background-color: #ffffff;
+				@include transition(border-radius, background-color);
+
+				.icon-font {
+					color: #3B3B3B;
+					@include transition(color);
+				}
+			}
+
+			.icon-font {
+				color: #ffffff;
+				font-size: 18px;
+				@include transition(color);
+			}
+		}
+	}
+}
+
+.subscribe {
+	position: relative;
+	display: flex;
+	margin-bottom: 25px;
+
+	input {
+		outline: none;
+		position: relative;
+		width: 100%;
+		height: 40px;
+		padding: 0 115px 0 20px;
+		box-shadow: none;
+		border-radius: 20px;
+		border: 1px solid #FFFFFF;
+		background-color: transparent;
+		@extend %fontAndaleMonoMTStd;
+		font-size: 14px;
+		color: #FFFFFF;
+		@include inputPlaceholder {
+			font-size: 14px;
+			color: #FFFFFF;
+		}
+	}
+
+	button {
+		z-index: 2;
+		cursor: pointer;
+		outline: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		height: 100%;
+		box-shadow: none;
+		border-radius: 20px;
+		border: 1px solid #F0AF37;
+		background-color: #f0af37;
+		font-weight: bold;
+		font-size: 13px;
+		color: #FFFFFF;
+		letter-spacing: 0.6px;
+		text-align: center;
+		@include transition(border-radius);
+
+		&:hover {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			@include transition(border-radius);
+		}
+	}
+}
+
 // COMMON :: END
