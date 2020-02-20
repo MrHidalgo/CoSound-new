@@ -1,0 +1,60 @@
+// SECTION :: START
+
+.about-main {
+	position: relative;
+
+	&__bg {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 43px);
+		background-color: #2d3136;
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+		display: flex;
+		padding: 57px 58px 44px;
+		background-color: #3759f0;
+		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.24);
+
+		&-left,
+		&-right {
+			position: relative;
+			width: 50%;
+		}
+	}
+
+	&__title {
+		@extend %fontAndaleMonoMTStd;
+		font-size: 143px;
+		color: $c-white;
+		letter-spacing: 0;
+		text-align: right;
+		line-height: 127px;
+	}
+
+	&__line {
+		position: absolute;
+		background-color: #FFFFFF;
+
+
+		&-1 {
+			top: 0;
+			left: 0;
+			width: 4px;
+			height: 70px;
+		}
+		&-2 {
+			right: 0;
+			bottom: 0;
+			width: 140px;
+			height: 4px;
+		}
+	}
+}
+
+// SECTION :: END
