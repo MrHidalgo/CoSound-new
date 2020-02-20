@@ -1,7 +1,12 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.subscribe input, .header__nav-link, .header__desc, .footer__title, .about-main__title, .about-check__title, .about-check__btn-content p {
+.subscribe input, .header__nav-link, .header__desc, .footer__title, .connect__title, .about-main__title, .about-check__title, .about-check__btn-content p {
   font-family: 'AndaleMonoMTStd', sans-serif;
+}
+
+/* line 29, src/scss/_utilities/_extend.scss */
+.connect__title span {
+  font-family: 'AndaleMono', sans-serif;
 }
 
 @font-face {
@@ -11,7 +16,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow-right:before, .icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-youtube:before {
+.icon-arrow-right:before, .icon-eye:before, .icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-youtube:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,34 +27,46 @@
   text-transform: none;
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
+/* line 53, src/scss/_generated/_spriteFont.scss */
 .icon-arrow-right:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-facebook:before {
+/* line 53, src/scss/_generated/_spriteFont.scss */
+.icon-eye:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-instagram:before {
+/* line 53, src/scss/_generated/_spriteFont.scss */
+.icon-facebook:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-twitter:before {
+/* line 53, src/scss/_generated/_spriteFont.scss */
+.icon-instagram:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-youtube:before {
+/* line 53, src/scss/_generated/_spriteFont.scss */
+.icon-twitter:before {
   content: "";
+}
+
+/* line 53, src/scss/_generated/_spriteFont.scss */
+.icon-youtube:before {
+  content: "";
 }
 
 @font-face {
   font-family: "AndaleMonoMTStd";
   src: url("../fonts/AndaleMonoMTStd-Bold.woff2") format("woff2"), url("../fonts/AndaleMonoMTStd-Bold.woff") format("woff"), url("../fonts/AndaleMonoMTStd-Bold.ttf") format("truetype"), url("../fonts/AndaleMonoMTStd-Bold.svg#AndaleMonoMTStd") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "AndaleMono";
+  src: url("../fonts/AndaleMono.woff2") format("woff2"), url("../fonts/AndaleMono.woff") format("woff"), url("../fonts/AndaleMono.ttf") format("truetype"), url("../fonts/AndaleMono.svg#AndaleMono") format("svg");
   font-style: normal;
   font-weight: normal;
 }
@@ -586,6 +603,90 @@ picture {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* line 24, src/scss/_macros/_btn.scss */
+.c-btn {
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  max-width: unset;
+  height: 43px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 2em;
+          border-radius: 2em;
+  color: white;
+  font-size: black;
+  font-weight: bold;
+}
+
+/* line 40, src/scss/_macros/_btn.scss */
+.c-btn--bg {
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 45, src/scss/_macros/_btn.scss */
+.c-btn--bg:hover {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 51, src/scss/_macros/_btn.scss */
+.c-btn--bg .icon-font {
+  margin-right: 12px;
+}
+
+/* line 55, src/scss/_macros/_btn.scss */
+.c-btn--bg-yellow {
+  background-color: #f0af37;
+}
+
+/* line 58, src/scss/_macros/_btn.scss */
+.c-btn--bg-yellow:hover {
+  background-color: #3759f0;
+}
+
+/* line 62, src/scss/_macros/_btn.scss */
+.c-btn--bg-yellow span,
+.c-btn--bg-yellow .icon-font {
+  color: #ffffff;
+}
+
+/* line 67, src/scss/_macros/_btn.scss */
+.c-btn--bg-yellow span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: 0.6px;
 }
 
 /* line 3, src/scss/_components/_header.scss */
@@ -1151,6 +1252,102 @@ picture {
   -webkit-transition: width 0.3s ease-in-out;
   -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
+}
+
+/* line 3, src/scss/_components/homepage/_connect.scss */
+.connect {
+  padding-top: 10px;
+}
+
+/* line 6, src/scss/_components/homepage/_connect.scss */
+.connect__title {
+  padding-bottom: 30px;
+  font-size: 96px;
+  color: #2d3136;
+  letter-spacing: 8.8px;
+  text-align: center;
+  line-height: 97px;
+}
+
+/* line 20, src/scss/_components/homepage/_connect.scss */
+.connect__subtitle {
+  width: 100%;
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 42px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* line 33, src/scss/_components/homepage/_connect.scss */
+.connect__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 38, src/scss/_components/homepage/_connect.scss */
+.connect__content {
+  position: relative;
+  width: 100%;
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 45, src/scss/_components/homepage/_connect.scss */
+.connect__content-line {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 3px;
+  height: 100px;
+  background-color: #181818;
+}
+
+/* line 54, src/scss/_components/homepage/_connect.scss */
+.connect__content > div {
+  width: 100%;
+  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 62, src/scss/_components/homepage/_connect.scss */
+.connect__visual {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 65px;
+}
+
+/* line 69, src/scss/_components/homepage/_connect.scss */
+.connect__visual img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-transform: translateX(-180px);
+      -ms-transform: translateX(-180px);
+          transform: translateX(-180px);
 }
 
 /* line 3, src/scss/_components/about/_main.scss */

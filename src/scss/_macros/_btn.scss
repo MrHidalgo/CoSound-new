@@ -4,13 +4,13 @@
 // ==================================================
 // ==================================================
 
-$bth-width: 250px;
-$bth-height: 45px;
+$bth-width: unset;
+$bth-height: 43px;
 $btn-border-width: 1px;
-$btn-border-color: rgba(#000, 1);
-$bth-border-radius: 5px;
+$btn-border-color: rgba(#000, 0);
+$bth-border-radius: 2em;
 $bth-box-shadow: none;
-$bth-background-color: rgba(#000, 1);
+//$bth-background-color: rgba(#000, 1);
 $bth-color: rgba(#fff, 1);
 $bth-font-size: rgba(#000, 1);
 $bth-font-weight: bold;
@@ -27,7 +27,7 @@ $btn-color--border: rgba(#000, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   max-width: $bth-width;
   height: $bth-height;
   border: $btn-border-width solid $btn-border-color;
@@ -37,21 +37,41 @@ $btn-color--border: rgba(#000, 1);
   font-size: $bth-font-size;
   font-weight: $bth-font-weight;
 
-  &--border {
-    background-color: transparent;
-    color: $btn-color--border;
-  }
-
   &--bg {
-    background-color: $bth-background-color;
-  }
+		padding-left: 20px;
+		padding-right: 20px;
+		@include transition(transform, background-color, box-shadow);
 
-  &__text {
-    &-wrap {}
-  }
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 5px 5px 0 0 rgba(#000, 0.1);
+			@include transition(transform, background-color, box-shadow);
+		}
 
-  &__icon {
-    &-wrap {}
+		.icon-font {
+			margin-right: 12px;
+		}
+
+		&-yellow {
+			background-color: #f0af37;
+
+			&:hover {
+				background-color: #3759f0;
+			}
+
+			span,
+			.icon-font {
+				color: #ffffff;
+			}
+
+			span {
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 13px;
+				color: #FFFFFF;
+				letter-spacing: 0.6px;
+			}
+		}
   }
 }
 

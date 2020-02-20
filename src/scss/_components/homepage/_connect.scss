@@ -1,0 +1,78 @@
+// SECTION :: START
+
+.connect {
+	padding-top: 10px;
+
+	&__title {
+		padding-bottom: 30px;
+		@extend %fontAndaleMonoMTStd;
+		font-size: 96px;
+		color: rgb(45,49,54);
+		letter-spacing: 8.8px;
+		text-align: center;
+		line-height: 97px;
+
+		span {
+			@extend %fontAndaleMono;
+		}
+	}
+
+	&__subtitle {
+		width: 100%;
+		max-width: 390px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 42px;
+		font-weight: 500;
+		font-size: 18px;
+		color: #000000;
+		letter-spacing: 0;
+		text-align: center;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		max-width: 1230px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&-line {
+			position: absolute;
+			top: 70px;
+			right: 0;
+			width: 3px;
+			height: 100px;
+			background-color: #181818;
+		}
+
+		> div {
+			width: 100%;
+			max-width: 730px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__visual {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding-bottom: 65px;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			transform: translateX(-180px);
+		}
+	}
+}
+
+// SECTION :: END

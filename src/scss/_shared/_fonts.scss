@@ -66,6 +66,7 @@
 //@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
 @include mixinFontFace("AndaleMonoMTStd", "-Bold", "../fonts/", normal, woff2 woff ttf svg);
+@include mixinFontFace("AndaleMono", "", "../fonts/", normal, woff2 woff ttf svg);
 
 @include mixinFontFace("HelveticaNeue", "-Bold", "../fonts/", bold, woff2 woff ttf svg);
 //@include mixinFontFace("HelveticaNeue", "-Heavy", "../fonts/", bold, woff2 woff ttf svg);
