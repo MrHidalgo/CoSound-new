@@ -27,17 +27,20 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == facebook {
+	@if $filename == arrow-right {
 		$char: "\E001";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook {
 		$char: "\E002";
 	}
-	@if $filename == twitter {
+	@if $filename == instagram {
 		$char: "\E003";
 	}
-	@if $filename == youtube {
+	@if $filename == twitter {
 		$char: "\E004";
+	}
+	@if $filename == youtube {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -54,6 +57,10 @@
 	}
 }
 
+.icon-arrow-right {
+	@include icon(arrow-right);
+
+}
 .icon-facebook {
 	@include icon(facebook);
 
