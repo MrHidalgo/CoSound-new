@@ -40,20 +40,53 @@
 	&__line {
 		position: absolute;
 		background-color: #FFFFFF;
-
+		transform-origin: center;
+		backface-visibility: hidden;
+		animation-fill-mode: both;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
 
 		&-1 {
 			top: 0;
 			left: 0;
 			width: 4px;
 			height: 70px;
+			animation-name: animateLine1;
 		}
+
 		&-2 {
 			right: 0;
 			bottom: 0;
 			width: 140px;
 			height: 4px;
+			animation-delay: 1s;
+			animation-name: animateLine2;
 		}
+	}
+}
+
+@keyframes animateLine1 {
+	from {
+		height: 0;
+	}
+	50% {
+		height: 70px;
+	}
+	to {
+		height: 0;
+	}
+}
+
+@keyframes animateLine2 {
+	from {
+		width: 0;
+	}
+	50% {
+		width: 140px;
+	}
+	to {
+		width: 0;
 	}
 }
 

@@ -1198,22 +1198,89 @@ picture {
 .about-main__line {
   position: absolute;
   background-color: #FFFFFF;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
-/* line 45, src/scss/_components/about/_main.scss */
+/* line 50, src/scss/_components/about/_main.scss */
 .about-main__line-1 {
   top: 0;
   left: 0;
   width: 4px;
   height: 70px;
+  -webkit-animation-name: animateLine1;
+          animation-name: animateLine1;
 }
 
-/* line 51, src/scss/_components/about/_main.scss */
+/* line 58, src/scss/_components/about/_main.scss */
 .about-main__line-2 {
   right: 0;
   bottom: 0;
   width: 140px;
   height: 4px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: animateLine2;
+          animation-name: animateLine2;
+}
+
+@-webkit-keyframes animateLine1 {
+  from {
+    height: 0;
+  }
+  50% {
+    height: 70px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes animateLine1 {
+  from {
+    height: 0;
+  }
+  50% {
+    height: 70px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes animateLine2 {
+  from {
+    width: 0;
+  }
+  50% {
+    width: 140px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes animateLine2 {
+  from {
+    width: 0;
+  }
+  50% {
+    width: 140px;
+  }
+  to {
+    width: 0;
+  }
 }
 
 /* line 3, src/scss/_components/about/_description.scss */
