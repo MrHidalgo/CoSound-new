@@ -56,13 +56,13 @@
 				_elID = _el.data('id'),
 				_elVal = _el.data('val');
 
-			$('[news-btn-js]').removeClass('is-active');
+			$('.news__slider, .news__description, [news-btn-js]').removeClass('is-active');
+
 			_el.addClass('is-active');
 
 			$('[news-title-js]').text(_elVal);
 			initNewsTitleAnimation();
 
-			$('.news__slider, .news__description').removeClass('is-active');
 			$('.news__slider-' + _elID).addClass('is-active');
 			$('.news__description-' + _elID).addClass('is-active');
 		});
