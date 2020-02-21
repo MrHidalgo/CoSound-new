@@ -48,8 +48,20 @@ $btn-color--border: rgba(#000, 1);
 			@include transition(transform, background-color, box-shadow);
 		}
 
+		.icon-font,
+		span {
+			@include transition(color);
+		}
+
 		.icon-font {
 			margin-right: 12px;
+		}
+
+		span {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 13px;
+			letter-spacing: 0.6px;
 		}
 
 		&-yellow {
@@ -63,13 +75,24 @@ $btn-color--border: rgba(#000, 1);
 			.icon-font {
 				color: #ffffff;
 			}
+		}
 
-			span {
-				text-transform: uppercase;
-				font-weight: bold;
-				font-size: 13px;
-				color: #FFFFFF;
-				letter-spacing: 0.6px;
+		&-white {
+			background-color: #FFFFFF;
+
+			&:hover {
+				background-color: #3759f0;
+
+				.icon-font,
+				span {
+					color: #ffffff;
+					@include transition(color);
+				}
+			}
+
+			span,
+			.icon-font {
+				color: #757575;
 			}
 		}
   }

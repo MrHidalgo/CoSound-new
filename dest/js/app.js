@@ -35,6 +35,33 @@ var initPreventBehavior = function initPreventBehavior() {
 };
 
 /**
+ * @name initSwiper
+ *
+ * @description initialize Swiper
+ */
+var initSwiper = function initSwiper() {
+	var sliderCount = 6;
+
+	for (var i = 1; i <= sliderCount; i++) {
+		new Swiper('.newsSlider' + i, {
+			loop: false,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 30,
+				slideShadows: false
+			},
+			speed: 1000,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: '.news__slider-' + i + ' .news__slider-btn--next',
+				prevEl: '.news__slider-' + i + ' .news__slider-btn--prev'
+			}
+		});
+	}
+};
+
+/**
  * @description Document DOM ready.
  */
 (function () {
@@ -42,7 +69,7 @@ var initPreventBehavior = function initPreventBehavior() {
  * =============================================
  * CALLBACK :: start
  * ============================================= */
-	var initAnimationTimeline = function initAnimationTimeline() {
+	var initAnimation = function initAnimation() {
 		/*function aboutAnimatedLine() {
   	const _tlAbout = new TimelineMax({
   		repeat: -1
@@ -61,6 +88,45 @@ var initPreventBehavior = function initPreventBehavior() {
   	aboutAnimatedLine();*/
 	};
 
+	var initNewsTitleAnimation = function initNewsTitleAnimation() {
+		var textWrapper = document.querySelector('.letters');
+
+		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+		anime.timeline({ loop: false }).add({
+			targets: '.letter',
+			rotateY: [-90, 0],
+			duration: 1300,
+			delay: function delay(el, i) {
+				return 60 * i;
+			}
+		}).add({
+			targets: '.letters',
+			opacity: 1,
+			duration: 1300,
+			easing: "easeOutExpo",
+			delay: 750
+		});
+	};
+
+	var initNewsNav = function initNewsNav() {
+		$('[news-btn-js]').on('click', function (ev) {
+			var _el = $(ev.currentTarget),
+			    _elID = _el.data('id'),
+			    _elVal = _el.data('val');
+
+			$('[news-btn-js]').removeClass('is-active');
+			_el.addClass('is-active');
+
+			$('[news-title-js]').text(_elVal);
+			initNewsTitleAnimation();
+
+			$('.news__slider, .news__description').removeClass('is-active');
+			$('.news__slider-' + _elID).addClass('is-active');
+			$('.news__description-' + _elID).addClass('is-active');
+		});
+	};
+
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -76,10 +142,11 @@ var initPreventBehavior = function initPreventBehavior() {
 		// ==========================================
 
 		// lib
+		initSwiper();
 		// ==========================================
 
 		// callback
-		initAnimationTimeline();
+		initNewsNav();
 		// ==========================================
 	};
 	initNative();

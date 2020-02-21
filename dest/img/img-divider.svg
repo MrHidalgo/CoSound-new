@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="215px" height="34px" viewBox="0 0 215 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>img-divider</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosound-Landing-2020" transform="translate(-481.000000, -1677.000000)">
+            <g id="img-divider" transform="translate(481.000000, 1681.000000)">
+                <g id="Group-18" transform="translate(48.000000, 0.000000)" stroke="#2A2A2A">
+                    <polyline id="Triangle" stroke-width="3" points="77 18 86 0 86 0 95 18"></polyline>
+                    <polyline id="Triangle" stroke-width="3" transform="translate(81.000000, 17.000000) scale(1, -1) translate(-81.000000, -17.000000) " points="72 26 81 8 81 8 90 26"></polyline>
+                    <rect id="Rectangle-41" x="0.5" y="8.5" width="74" height="4"></rect>
+                    <rect id="Rectangle-41" fill="#2A2A2A" x="92.5" y="13.5" width="74" height="4"></rect>
+                </g>
+                <circle id="Oval-3" fill="#2A2A2A" cx="4" cy="13" r="4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

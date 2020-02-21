@@ -1,0 +1,43 @@
+.news__wrapper-left
+	div
+		.news__wrapper-left--header
+
+			img(src="img/logo-small.svg" alt="")
+
+			p.news__title!= "news<br>& blog"
+
+		.news__wrapper-left--body
+
+			ul.news__nav
+				li.news__nav-item
+					a.news__nav-link.is-active(href="#" data-id='1' data-val='music services' news-btn-js)
+						span 01
+						p services
+				li.news__nav-item
+					a.news__nav-link(href="#" data-id='2' data-val='music hardware' news-btn-js)
+						span 02
+						p hardware
+				li.news__nav-item
+					a.news__nav-link(href="#" data-id='3' data-val='music software' news-btn-js)
+						span 03
+						p software
+				li.news__nav-item
+					a.news__nav-link(href="#" data-id='4' data-val='music production' news-btn-js)
+						span 04
+						p production
+				li.news__nav-item
+					a.news__nav-link(href="#" data-id='5' data-val='music business' news-btn-js)
+						span 05
+						p music business
+				li.news__nav-item
+					a.news__nav-link(href="#" data-id='6' data-val='music promotion' news-btn-js)
+						span 06
+						p promotion
+
+		.news__wrapper-left--action
+			a.news__more(href="#")
+				span more resources
+				i.icon-font.icon-arrow-long
+
+		.news__wrapper-left--footer
+			img(src="img/img-news-left.jpg" srcset="img/img-news-left@2x.jpg 2x" alt="")

@@ -6,7 +6,7 @@
 	* =============================================
 	* CALLBACK :: start
 	* ============================================= */
-	const initAnimationTimeline = () => {
+	const initAnimation = () => {
 		/*function aboutAnimatedLine() {
 			const _tlAbout = new TimelineMax({
 				repeat: -1
@@ -29,6 +29,45 @@
 		aboutAnimatedLine();*/
 	};
 
+	const initNewsTitleAnimation = () => {
+		const textWrapper = document.querySelector('.letters');
+
+		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+		anime.timeline({loop: false})
+			.add({
+				targets: '.letter',
+				rotateY: [-90, 0],
+				duration: 1300,
+				delay: (el, i) => 60 * i
+			}).add({
+			targets: '.letters',
+			opacity: 1,
+			duration: 1300,
+			easing: "easeOutExpo",
+			delay: 750
+		});
+	};
+
+
+	const initNewsNav = () => {
+		$('[news-btn-js]').on('click', (ev) => {
+			const _el = $(ev.currentTarget),
+				_elID = _el.data('id'),
+				_elVal = _el.data('val');
+
+			$('[news-btn-js]').removeClass('is-active');
+			_el.addClass('is-active');
+
+			$('[news-title-js]').text(_elVal);
+			initNewsTitleAnimation();
+
+			$('.news__slider, .news__description').removeClass('is-active');
+			$('.news__slider-' + _elID).addClass('is-active');
+			$('.news__description-' + _elID).addClass('is-active');
+		});
+	};
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -45,10 +84,11 @@
 		// ==========================================
 
 		// lib
+		initSwiper();
 		// ==========================================
 
 		// callback
-		initAnimationTimeline();
+		initNewsNav();
 		// ==========================================
 	};
 	initNative();

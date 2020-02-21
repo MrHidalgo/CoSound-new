@@ -1,0 +1,47 @@
+.news__wrapper-right
+	div
+		.news__wrapper-right--body
+
+			each val, idx in [1,2,3,4,5,6]
+				.news__slider(class!= (idx === 0)?"is-active news__slider-" + val:"news__slider-" + val)
+					.news__slider-container
+						mixin swiperContent()
+							.swiper-slide(style='background-image:url("img/img-news-slider@2x.jpg");')
+							.swiper-slide(style='background-image:url("img/img-news-slider@2x.jpg");')
+							.swiper-slide(style='background-image:url("img/img-news-slider@2x.jpg");')
+
+						+swiper('newsSlider' + val, 'swiperContent', false, false, false)
+
+					.news__slider-header
+						div
+							p.news__slider-title!= "unified experience " + val
+						div
+							.news__slider-btn-wrapper
+								a.news__slider-btn.news__slider-btn--prev(href="#")
+									i.icon-font.icon-corner
+								a.news__slider-btn.news__slider-btn--next(href="#")
+									i.icon-font.icon-corner
+
+		.news__wrapper-right--footer
+			each val, idx in [1,2,3,4,5,6]
+				.news__description(class!= (idx === 0)?"is-active news__description-" + val:"news__description-" + val)
+					if(val === 1)
+						p.news__desc 2 magnetically attaching earbuds also allow you to easily turn on/off the device without the use of annoying and awkward long presses. This ensures a more “gesture” inclusive way of controlling your earphones.
+					else if(val === 2)
+						p.news__desc 2 magnetically attaching earbuds also allow you to easily turn on/off the device without the use of annoying and awkward long presses.
+					else if(val === 3)
+						p.news__desc 2 magnetically attaching earbuds also allow you to easily turn on/off the device without the use of annoying and awkward long presses. This ensures a more...
+					else if(val === 4)
+						p.news__desc 2 magnetically attaching earbuds also allow you to easily turn on/off the device without the use of annoying and awkward...
+					else if(val === 5)
+						p.news__desc 2 magnetically attaching earbuds also allow you to easily turn on/off the device without the use of annoying and awkward long presses.
+					else if(val === 6)
+						p.news__desc 2 magnetically attaching earbuds also allow you to easily turn on/off the device without the use of annoying and awkward long presses. This ensures a more “gesture” inclusive way of controlling your earphones.
+
+					.news__info
+						.news__info-left
+							i.icon-font.icon-like
+							span 2324
+						.news__info-right
+							i.icon-font.icon-share
+							span Share

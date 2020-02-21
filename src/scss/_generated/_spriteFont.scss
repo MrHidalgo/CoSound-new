@@ -27,23 +27,35 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == arrow-right {
+	@if $filename == arrow-long {
 		$char: "\E001";
 	}
-	@if $filename == eye {
+	@if $filename == arrow-right {
 		$char: "\E002";
 	}
-	@if $filename == facebook {
+	@if $filename == corner {
 		$char: "\E003";
 	}
-	@if $filename == instagram {
+	@if $filename == eye {
 		$char: "\E004";
 	}
-	@if $filename == twitter {
+	@if $filename == facebook {
 		$char: "\E005";
 	}
-	@if $filename == youtube {
+	@if $filename == instagram {
 		$char: "\E006";
+	}
+	@if $filename == like {
+		$char: "\E007";
+	}
+	@if $filename == share {
+		$char: "\E008";
+	}
+	@if $filename == twitter {
+		$char: "\E009";
+	}
+	@if $filename == youtube {
+		$char: "\E00A";
 	}
 
 	@return $char;
@@ -60,8 +72,16 @@
 	}
 }
 
+.icon-arrow-long {
+	@include icon(arrow-long);
+
+}
 .icon-arrow-right {
 	@include icon(arrow-right);
+
+}
+.icon-corner {
+	@include icon(corner);
 
 }
 .icon-eye {
@@ -74,6 +94,14 @@
 }
 .icon-instagram {
 	@include icon(instagram);
+
+}
+.icon-like {
+	@include icon(like);
+
+}
+.icon-share {
+	@include icon(share);
 
 }
 .icon-twitter {
