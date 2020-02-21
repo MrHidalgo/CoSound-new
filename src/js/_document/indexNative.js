@@ -68,6 +68,25 @@
 		});
 	};
 
+
+	const initTabs = () => {
+		$('[tabs-btn-js]').on('click', (ev) => {
+			const _el = $(ev.currentTarget),
+				_elID = _el.data('id');
+
+			$('.tabs__main').addClass('is-overlay');
+
+			if(_el.closest('[tabs-parent-js]').hasClass('is-open')) {
+				_el.closest('[tabs-parent-js]').removeClass('is-open');
+				$('.tabs__square').removeClass('is-change');
+				$('.tabs__main').removeClass('is-overlay');
+			} else {
+				_el.closest('[tabs-parent-js]').addClass('is-open').removeClass('is-overlay');
+				$('.tabs__square').addClass('is-change');
+			}
+		})
+	};
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -89,6 +108,7 @@
 
 		// callback
 		initNewsNav();
+		initTabs();
 		// ==========================================
 	};
 	initNative();

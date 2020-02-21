@@ -1,0 +1,59 @@
+// SECTION :: START
+
+section#tabs.tabs
+
+	.tabs__wrapper
+		.tabs__wrapper-left
+
+			.tabs__main
+				.tabs__main-btn(data-id='1')
+					p social network
+				.tabs__main-content
+					ul.tabs__list
+						li.tabs__list-item
+							span 01
+							p!= "find and connect with<br>the music industry"
+						li.tabs__list-item
+							span 02
+							p!= "collaborate with<br>your network"
+						li.tabs__list-item
+							span 03
+							p!= "manage your<br>career or business"
+						li.tabs__list-item
+							span 04
+							p!= "find inspiration &<br>industry advice"
+
+			.tabs__main.tabs__main--inner(tabs-parent-js)
+				.tabs__main-btn(data-id='2' tabs-btn-js)
+					p marketplace
+				.tabs__main-content
+					ul.tabs__list
+						li.tabs__list-item
+							span 01
+							p!= "find and connect with<br>the music industry"
+						li.tabs__list-item
+							span 02
+							p!= "collaborate with<br>your network"
+						li.tabs__list-item
+							span 03
+							p!= "manage your<br>career or business"
+						li.tabs__list-item
+							span 04
+							p!= "find inspiration &<br>industry advice"
+
+		.tabs__wrapper-right
+
+			.tabs__square
+				.tabs__square-top
+				.tabs__square-bottom
+
+			.tabs__visual
+				img(src="img/img-iphone.png" srcset="img/img-iphone.png" alt="")
+
+	.tabs__store
+		a.tabs__store-btn(href="#")
+			img(src="img/apple.svg" alt="")
+		a.tabs__store-btn(href="#")
+			img(src="img/google-play.svg" alt="")
+
+// SECTION :: END
