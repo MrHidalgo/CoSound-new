@@ -2929,7 +2929,21 @@ picture {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 84, src/scss/_components/about/_video.scss */
+/* line 83, src/scss/_components/about/_video.scss */
+.about-video__play:hover {
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 90, src/scss/_components/about/_video.scss */
 .about-video__play.is-play .icon-font {
   -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -2938,21 +2952,21 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 87, src/scss/_components/about/_video.scss */
+/* line 93, src/scss/_components/about/_video.scss */
 .about-video__play.is-play .icon-font.icon-play {
   opacity: 0;
   -webkit-transform: rotate3d(0, 1, 0, 90deg);
           transform: rotate3d(0, 1, 0, 90deg);
 }
 
-/* line 91, src/scss/_components/about/_video.scss */
+/* line 97, src/scss/_components/about/_video.scss */
 .about-video__play.is-play .icon-font.icon-pause {
   opacity: 1;
   -webkit-transform: rotate3d(0, 1, 0, 0deg);
           transform: rotate3d(0, 1, 0, 0deg);
 }
 
-/* line 98, src/scss/_components/about/_video.scss */
+/* line 104, src/scss/_components/about/_video.scss */
 .about-video__play .icon-font {
   position: absolute;
   color: #d8d8d8;
@@ -2969,20 +2983,20 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 106, src/scss/_components/about/_video.scss */
+/* line 112, src/scss/_components/about/_video.scss */
 .about-video__play .icon-font.icon-play {
   position: relative;
   left: 3px;
 }
 
-/* line 110, src/scss/_components/about/_video.scss */
+/* line 116, src/scss/_components/about/_video.scss */
 .about-video__play .icon-font.icon-pause {
   opacity: 0;
   -webkit-transform: rotate3d(0, 1, 0, 90deg);
           transform: rotate3d(0, 1, 0, 90deg);
 }
 
-/* line 117, src/scss/_components/about/_video.scss */
+/* line 123, src/scss/_components/about/_video.scss */
 .about-video__action {
   z-index: 10;
   position: absolute;
@@ -3001,12 +3015,12 @@ picture {
           align-items: center;
 }
 
-/* line 129, src/scss/_components/about/_video.scss */
+/* line 135, src/scss/_components/about/_video.scss */
 .about-video__action > div:nth-of-type(1) {
   width: 130px;
 }
 
-/* line 132, src/scss/_components/about/_video.scss */
+/* line 138, src/scss/_components/about/_video.scss */
 .about-video__action > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -3016,12 +3030,12 @@ picture {
   max-width: 100%;
 }
 
-/* line 137, src/scss/_components/about/_video.scss */
+/* line 143, src/scss/_components/about/_video.scss */
 .about-video__action > div:nth-of-type(3) {
   width: 130px;
 }
 
-/* line 143, src/scss/_components/about/_video.scss */
+/* line 149, src/scss/_components/about/_video.scss */
 .about-video__time {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3033,20 +3047,20 @@ picture {
           align-items: center;
 }
 
-/* line 147, src/scss/_components/about/_video.scss */
+/* line 153, src/scss/_components/about/_video.scss */
 .about-video__time > * {
   font-size: 15px;
   color: #FFFFFF;
   letter-spacing: 1px;
 }
 
-/* line 154, src/scss/_components/about/_video.scss */
+/* line 160, src/scss/_components/about/_video.scss */
 .about-video__time-divider {
   margin-left: 18px;
   margin-right: 18px;
 }
 
-/* line 160, src/scss/_components/about/_video.scss */
+/* line 166, src/scss/_components/about/_video.scss */
 .about-video__volume {
   position: relative;
   top: -3px;
@@ -3064,31 +3078,42 @@ picture {
           justify-content: center;
 }
 
-/* line 168, src/scss/_components/about/_video.scss */
+/* line 174, src/scss/_components/about/_video.scss */
 .about-video__volume > div:nth-of-type(1) {
   padding-right: 15px;
 }
 
-/* line 171, src/scss/_components/about/_video.scss */
+/* line 177, src/scss/_components/about/_video.scss */
 .about-video__volume > div:nth-of-type(3) {
   padding-left: 15px;
 }
 
-/* line 176, src/scss/_components/about/_video.scss */
+/* line 182, src/scss/_components/about/_video.scss */
 .about-video__volume-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-/* line 179, src/scss/_components/about/_video.scss */
+/* line 186, src/scss/_components/about/_video.scss */
+.about-video__volume-btn:hover {
+  opacity: 0.75;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* line 191, src/scss/_components/about/_video.scss */
 .about-video__volume-btn .icon-font {
   color: #ffffff;
   font-size: 20px;
 }
 
-/* line 185, src/scss/_components/about/_video.scss */
+/* line 197, src/scss/_components/about/_video.scss */
 .about-video__volume-progress {
   position: relative;
   display: -webkit-box;
@@ -3097,7 +3122,7 @@ picture {
   display: flex;
 }
 
-/* line 190, src/scss/_components/about/_video.scss */
+/* line 202, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range] {
   outline: none;
   cursor: pointer;
@@ -3120,7 +3145,7 @@ picture {
   background-repeat: no-repeat;
 }
 
-/* line 204, src/scss/_components/about/_video.scss */
+/* line 216, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-webkit-slider-runnable-track {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -3130,19 +3155,19 @@ picture {
           appearance: none;
 }
 
-/* line 210, src/scss/_components/about/_video.scss */
+/* line 222, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-moz-range-track {
   box-shadow: none;
   border: none;
   background: transparent;
 }
 
-/* line 215, src/scss/_components/about/_video.scss */
+/* line 227, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-moz-focus-outer {
   border: 0;
 }
 
-/* line 218, src/scss/_components/about/_video.scss */
+/* line 230, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
@@ -3154,7 +3179,7 @@ picture {
   background-color: #fff;
 }
 
-/* line 226, src/scss/_components/about/_video.scss */
+/* line 238, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
@@ -3163,7 +3188,7 @@ picture {
   background-color: #fff;
 }
 
-/* line 235, src/scss/_components/about/_video.scss */
+/* line 247, src/scss/_components/about/_video.scss */
 .about-video__progress {
   z-index: 5;
   position: absolute;
@@ -3178,14 +3203,14 @@ picture {
   background-color: rgba(255, 255, 255, 0.35);
 }
 
-/* line 245, src/scss/_components/about/_video.scss */
+/* line 257, src/scss/_components/about/_video.scss */
 .about-video__progress span {
   width: 0;
   height: 100%;
   background-color: #ffffff;
 }
 
-/* line 252, src/scss/_components/about/_video.scss */
+/* line 264, src/scss/_components/about/_video.scss */
 .about-video__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3212,12 +3237,12 @@ picture {
           transform: rotate(-180deg);
 }
 
-/* line 262, src/scss/_components/about/_video.scss */
+/* line 274, src/scss/_components/about/_video.scss */
 .about-video__nav-btn, .about-video__nav-circle {
   white-space: nowrap;
 }
 
-/* line 267, src/scss/_components/about/_video.scss */
+/* line 279, src/scss/_components/about/_video.scss */
 .about-video__nav-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3235,7 +3260,7 @@ picture {
   width: 44px;
 }
 
-/* line 275, src/scss/_components/about/_video.scss */
+/* line 287, src/scss/_components/about/_video.scss */
 .about-video__nav-btn:hover span {
   color: #3759f0;
   -webkit-transition: color 0.3s ease-in-out;
@@ -3243,34 +3268,34 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 281, src/scss/_components/about/_video.scss */
+/* line 293, src/scss/_components/about/_video.scss */
 .about-video__nav-btn.is-active {
   width: 44px;
   height: 116px;
   background-color: #3759f0;
 }
 
-/* line 286, src/scss/_components/about/_video.scss */
+/* line 298, src/scss/_components/about/_video.scss */
 .about-video__nav-btn.is-active span {
   color: #ffffff;
 }
 
-/* line 291, src/scss/_components/about/_video.scss */
+/* line 303, src/scss/_components/about/_video.scss */
 .about-video__nav-btn-1 {
   height: 116px;
 }
 
-/* line 294, src/scss/_components/about/_video.scss */
+/* line 306, src/scss/_components/about/_video.scss */
 .about-video__nav-btn-2 {
   height: 60px;
 }
 
-/* line 297, src/scss/_components/about/_video.scss */
+/* line 309, src/scss/_components/about/_video.scss */
 .about-video__nav-btn-3 {
   height: 120px;
 }
 
-/* line 301, src/scss/_components/about/_video.scss */
+/* line 313, src/scss/_components/about/_video.scss */
 .about-video__nav-btn span {
   position: relative;
   left: -3px;
@@ -3285,7 +3310,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 313, src/scss/_components/about/_video.scss */
+/* line 325, src/scss/_components/about/_video.scss */
 .about-video__nav-circle {
   display: block;
   width: 8px;

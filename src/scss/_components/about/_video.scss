@@ -80,6 +80,12 @@
 		background-color: #ffffff;
 		@include transition(box-shadow, transform);
 
+		&:hover {
+			box-shadow: 0 5px 10px 0 rgba(#000, 0.15);
+			transform: scale(0.9);
+			@include transition(box-shadow, transform);
+		}
+
 		&.is-play {
 			.icon-font {
 				@include transition(opacity, transform);
@@ -175,6 +181,12 @@
 
 		&-btn {
 			display: flex;
+			@include transition(opacity);
+
+			&:hover {
+				opacity: 0.75;
+				@include transition(opacity);
+			}
 
 			.icon-font {
 				color: #ffffff;
