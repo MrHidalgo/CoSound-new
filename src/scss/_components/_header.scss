@@ -12,6 +12,9 @@
 		position: relative;
 		left: -2px;
 		max-width: 1330px;
+		@include adaptive(1023) {
+			left: 0;
+		}
 	}
 
 	&__wrapper {
@@ -19,18 +22,30 @@
 		align-items: center;
 		height: 100px;
 		padding-top: 5px;
+		@include adaptive(1023) {
+			padding-top: 0;
+		}
 
 		&-left {
 			padding-right: 47px;
+			@include adaptive(1023) {
+				padding-right: 30px;
+			}
 		}
 
 		&-middle {
 			padding-top: 6px;
+			@include adaptive(1023) {
+				padding-top: 0;
+			}
 		}
 
 		&-right {
 			margin-left: auto;
 			padding-top: 6px;
+			@include adaptive(1023) {
+				padding-top: 0;
+			}
 		}
 	}
 
@@ -47,9 +62,18 @@
 			font-size: 16px;
 			color: #FFFFFF;
 			letter-spacing: 1px;
+			@include adaptive(1365) {
+				font-size: 15px;
+			}
+			@include adaptive(1023) {
+				font-size: 14px;
+			}
 
 			&:not(:last-of-type) {
 				margin-right: 18px;
+				@include adaptive(1023) {
+					margin-right: 5px;
+				}
 			}
 
 			&:before,
@@ -100,6 +124,12 @@
 		font-size: 16px;
 		color: #FFFFFF;
 		letter-spacing: 1px;
+		@include adaptive(1365) {
+			font-size: 15px;
+		}
+		@include adaptive(1023) {
+			font-size: 14px;
+		}
 	}
 }
 

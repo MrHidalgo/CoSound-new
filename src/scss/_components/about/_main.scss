@@ -20,6 +20,12 @@
 		padding: 77px 58px 62px;
 		background-color: #3759f0;
 		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.24);
+		@include adaptive(1365) {
+			padding: 60px 50px;
+		}
+		@include adaptive(1023) {
+			padding: 50px 30px;
+		}
 
 		&-left,
 		&-right {
@@ -35,6 +41,21 @@
 		letter-spacing: 0;
 		text-align: right;
 		line-height: 127px;
+		@include adaptive(1439) {
+			font-size: 123px;
+			line-height: 117px;
+		}
+		@include adaptive(1365) {
+			font-size: 103px;
+			line-height: 107px;
+		}
+		@include adaptive(1279) {
+			font-size: 93px;
+			line-height: normal;
+		}
+		@include adaptive(1023) {
+			font-size: 83px;
+		}
 	}
 
 	&__line {
@@ -53,6 +74,10 @@
 			width: 4px;
 			height: 70px;
 			animation-name: animateLine1;
+			@include adaptive(1023) {
+				top: 0;
+				left: 0;
+			}
 		}
 
 		&-2 {
@@ -62,6 +87,10 @@
 			height: 4px;
 			animation-delay: 1s;
 			animation-name: animateLine2;
+			@include adaptive(1023) {
+				right: 0;
+				bottom: 0;
+			}
 		}
 	}
 }

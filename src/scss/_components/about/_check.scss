@@ -12,6 +12,9 @@
 		padding: 18px 140px 15px 57px;
 		background-color: #3759F0;
 		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.17);
+		@include adaptive(1023) {
+			padding: 18px 140px 15px 35px;
+		}
 	}
 
 	&__content {
@@ -27,6 +30,9 @@
 		color: #FFFFFF;
 		letter-spacing: 0;
 		line-height: 24px;
+		@include adaptive(1365) {
+			font-size: 22px;
+		}
 
 		.icon-font {
 			position: relative;

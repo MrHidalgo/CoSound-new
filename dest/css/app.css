@@ -787,7 +787,14 @@ picture {
   max-width: 1330px;
 }
 
-/* line 17, src/scss/_components/_header.scss */
+@media screen and (max-width: 1023px) {
+  /* line 11, src/scss/_components/_header.scss */
+  .header .c-grid {
+    left: 0;
+  }
+}
+
+/* line 20, src/scss/_components/_header.scss */
 .header__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -801,23 +808,51 @@ picture {
   padding-top: 5px;
 }
 
-/* line 23, src/scss/_components/_header.scss */
+@media screen and (max-width: 1023px) {
+  /* line 20, src/scss/_components/_header.scss */
+  .header__wrapper {
+    padding-top: 0;
+  }
+}
+
+/* line 29, src/scss/_components/_header.scss */
 .header__wrapper-left {
   padding-right: 47px;
 }
 
-/* line 27, src/scss/_components/_header.scss */
+@media screen and (max-width: 1023px) {
+  /* line 29, src/scss/_components/_header.scss */
+  .header__wrapper-left {
+    padding-right: 30px;
+  }
+}
+
+/* line 36, src/scss/_components/_header.scss */
 .header__wrapper-middle {
   padding-top: 6px;
 }
 
-/* line 31, src/scss/_components/_header.scss */
+@media screen and (max-width: 1023px) {
+  /* line 36, src/scss/_components/_header.scss */
+  .header__wrapper-middle {
+    padding-top: 0;
+  }
+}
+
+/* line 43, src/scss/_components/_header.scss */
 .header__wrapper-right {
   margin-left: auto;
   padding-top: 6px;
 }
 
-/* line 37, src/scss/_components/_header.scss */
+@media screen and (max-width: 1023px) {
+  /* line 43, src/scss/_components/_header.scss */
+  .header__wrapper-right {
+    padding-top: 0;
+  }
+}
+
+/* line 52, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -829,7 +864,7 @@ picture {
           align-items: center;
 }
 
-/* line 41, src/scss/_components/_header.scss */
+/* line 56, src/scss/_components/_header.scss */
 .header__nav-link {
   position: relative;
   display: -webkit-box;
@@ -849,12 +884,33 @@ picture {
   letter-spacing: 1px;
 }
 
-/* line 51, src/scss/_components/_header.scss */
+@media screen and (max-width: 1365px) {
+  /* line 56, src/scss/_components/_header.scss */
+  .header__nav-link {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 56, src/scss/_components/_header.scss */
+  .header__nav-link {
+    font-size: 14px;
+  }
+}
+
+/* line 72, src/scss/_components/_header.scss */
 .header__nav-link:not(:last-of-type) {
   margin-right: 18px;
 }
 
-/* line 55, src/scss/_components/_header.scss */
+@media screen and (max-width: 1023px) {
+  /* line 72, src/scss/_components/_header.scss */
+  .header__nav-link:not(:last-of-type) {
+    margin-right: 5px;
+  }
+}
+
+/* line 79, src/scss/_components/_header.scss */
 .header__nav-link:before, .header__nav-link:after {
   opacity: 0;
   visibility: hidden;
@@ -870,7 +926,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 66, src/scss/_components/_header.scss */
+/* line 90, src/scss/_components/_header.scss */
 .header__nav-link:before {
   content: '[';
   -webkit-transform: translateX(5px);
@@ -878,7 +934,7 @@ picture {
           transform: translateX(5px);
 }
 
-/* line 70, src/scss/_components/_header.scss */
+/* line 94, src/scss/_components/_header.scss */
 .header__nav-link:after {
   content: ']';
   -webkit-transform: translateX(-5px);
@@ -886,7 +942,7 @@ picture {
           transform: translateX(-5px);
 }
 
-/* line 75, src/scss/_components/_header.scss */
+/* line 99, src/scss/_components/_header.scss */
 .header__nav-link:hover {
   color: #a8a8aa;
   -webkit-transition: color 0.3s ease-in-out;
@@ -894,7 +950,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 79, src/scss/_components/_header.scss */
+/* line 103, src/scss/_components/_header.scss */
 .header__nav-link:hover:before, .header__nav-link:hover:after {
   opacity: 1;
   visibility: visible;
@@ -903,7 +959,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 86, src/scss/_components/_header.scss */
+/* line 110, src/scss/_components/_header.scss */
 .header__nav-link:hover:before {
   -webkit-transform: translateX(-10px);
       -ms-transform: translateX(-10px);
@@ -915,7 +971,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 90, src/scss/_components/_header.scss */
+/* line 114, src/scss/_components/_header.scss */
 .header__nav-link:hover:after {
   -webkit-transform: translateX(10px);
       -ms-transform: translateX(10px);
@@ -927,11 +983,25 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 98, src/scss/_components/_header.scss */
+/* line 122, src/scss/_components/_header.scss */
 .header__desc {
   font-size: 16px;
   color: #FFFFFF;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 122, src/scss/_components/_header.scss */
+  .header__desc {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 122, src/scss/_components/_header.scss */
+  .header__desc {
+    font-size: 14px;
+  }
 }
 
 /* line 3, src/scss/_components/_footer.scss */
@@ -2440,13 +2510,27 @@ picture {
           box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.24);
 }
 
-/* line 24, src/scss/_components/about/_main.scss */
+@media screen and (max-width: 1365px) {
+  /* line 16, src/scss/_components/about/_main.scss */
+  .about-main__wrapper {
+    padding: 60px 50px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 16, src/scss/_components/about/_main.scss */
+  .about-main__wrapper {
+    padding: 50px 30px;
+  }
+}
+
+/* line 30, src/scss/_components/about/_main.scss */
 .about-main__wrapper-left, .about-main__wrapper-right {
   position: relative;
   width: 50%;
 }
 
-/* line 31, src/scss/_components/about/_main.scss */
+/* line 37, src/scss/_components/about/_main.scss */
 .about-main__title {
   font-size: 143px;
   color: #fff;
@@ -2455,7 +2539,38 @@ picture {
   line-height: 127px;
 }
 
-/* line 40, src/scss/_components/about/_main.scss */
+@media screen and (max-width: 1439px) {
+  /* line 37, src/scss/_components/about/_main.scss */
+  .about-main__title {
+    font-size: 123px;
+    line-height: 117px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 37, src/scss/_components/about/_main.scss */
+  .about-main__title {
+    font-size: 103px;
+    line-height: 107px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 37, src/scss/_components/about/_main.scss */
+  .about-main__title {
+    font-size: 93px;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 37, src/scss/_components/about/_main.scss */
+  .about-main__title {
+    font-size: 83px;
+  }
+}
+
+/* line 61, src/scss/_components/about/_main.scss */
 .about-main__line {
   position: absolute;
   background-color: #FFFFFF;
@@ -2474,7 +2589,7 @@ picture {
           animation-timing-function: ease-in-out;
 }
 
-/* line 50, src/scss/_components/about/_main.scss */
+/* line 71, src/scss/_components/about/_main.scss */
 .about-main__line-1 {
   top: -20px;
   left: -7px;
@@ -2484,7 +2599,15 @@ picture {
           animation-name: animateLine1;
 }
 
-/* line 58, src/scss/_components/about/_main.scss */
+@media screen and (max-width: 1023px) {
+  /* line 71, src/scss/_components/about/_main.scss */
+  .about-main__line-1 {
+    top: 0;
+    left: 0;
+  }
+}
+
+/* line 83, src/scss/_components/about/_main.scss */
 .about-main__line-2 {
   right: 21px;
   bottom: -18px;
@@ -2494,6 +2617,14 @@ picture {
           animation-delay: 1s;
   -webkit-animation-name: animateLine2;
           animation-name: animateLine2;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 83, src/scss/_components/about/_main.scss */
+  .about-main__line-2 {
+    right: 0;
+    bottom: 0;
+  }
 }
 
 @-webkit-keyframes animateLine1 {
@@ -2550,7 +2681,23 @@ picture {
   padding-bottom: 119px;
 }
 
-/* line 7, src/scss/_components/about/_description.scss */
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/about/_description.scss */
+  .about-description {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/about/_description.scss */
+  .about-description {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+}
+
+/* line 15, src/scss/_components/about/_description.scss */
 .about-description__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2562,22 +2709,36 @@ picture {
   margin-right: auto;
 }
 
-/* line 14, src/scss/_components/about/_description.scss */
+/* line 22, src/scss/_components/about/_description.scss */
 .about-description__wrapper-left, .about-description__wrapper-right {
   width: 50%;
 }
 
-/* line 19, src/scss/_components/about/_description.scss */
+/* line 27, src/scss/_components/about/_description.scss */
 .about-description__wrapper-left {
   padding-right: 43px;
 }
 
-/* line 22, src/scss/_components/about/_description.scss */
+@media screen and (max-width: 1023px) {
+  /* line 27, src/scss/_components/about/_description.scss */
+  .about-description__wrapper-left {
+    padding-right: 20px;
+  }
+}
+
+/* line 33, src/scss/_components/about/_description.scss */
 .about-description__wrapper-right {
   padding-left: 49px;
 }
 
-/* line 27, src/scss/_components/about/_description.scss */
+@media screen and (max-width: 1023px) {
+  /* line 33, src/scss/_components/about/_description.scss */
+  .about-description__wrapper-right {
+    padding-left: 20px;
+  }
+}
+
+/* line 41, src/scss/_components/about/_description.scss */
 .about-description__text {
   padding-bottom: 20px;
   font-size: 14px;
@@ -2616,12 +2777,19 @@ picture {
           box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.17);
 }
 
-/* line 17, src/scss/_components/about/_check.scss */
+@media screen and (max-width: 1023px) {
+  /* line 7, src/scss/_components/about/_check.scss */
+  .about-check__wrapper {
+    padding: 18px 140px 15px 35px;
+  }
+}
+
+/* line 20, src/scss/_components/about/_check.scss */
 .about-check__content {
   background-color: #3759F0;
 }
 
-/* line 21, src/scss/_components/about/_check.scss */
+/* line 24, src/scss/_components/about/_check.scss */
 .about-check__title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2640,7 +2808,14 @@ picture {
   line-height: 24px;
 }
 
-/* line 31, src/scss/_components/about/_check.scss */
+@media screen and (max-width: 1365px) {
+  /* line 24, src/scss/_components/about/_check.scss */
+  .about-check__title {
+    font-size: 22px;
+  }
+}
+
+/* line 37, src/scss/_components/about/_check.scss */
 .about-check__title .icon-font {
   position: relative;
   top: -2px;
@@ -2648,7 +2823,7 @@ picture {
   font-size: 21px;
 }
 
-/* line 39, src/scss/_components/about/_check.scss */
+/* line 45, src/scss/_components/about/_check.scss */
 .about-check__btn {
   position: absolute;
   top: 50%;
@@ -2661,7 +2836,7 @@ picture {
   max-width: 221px;
 }
 
-/* line 50, src/scss/_components/about/_check.scss */
+/* line 56, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-border {
   opacity: 0;
   -webkit-transform: scale(1.35);
@@ -2674,7 +2849,7 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 56, src/scss/_components/about/_check.scss */
+/* line 62, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-content {
   -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.15);
@@ -2685,24 +2860,24 @@ picture {
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 60, src/scss/_components/about/_check.scss */
+/* line 66, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-content > div {
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 63, src/scss/_components/about/_check.scss */
+/* line 69, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-content > div:nth-of-type(1) {
   background-color: #212121;
 }
 
-/* line 66, src/scss/_components/about/_check.scss */
+/* line 72, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-content > div:nth-of-type(2) {
   background-color: #ffffff;
 }
 
-/* line 71, src/scss/_components/about/_check.scss */
+/* line 77, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-content span {
   height: 10px;
   background-color: #ffffff;
@@ -2711,7 +2886,7 @@ picture {
   transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
-/* line 77, src/scss/_components/about/_check.scss */
+/* line 83, src/scss/_components/about/_check.scss */
 .about-check__btn:hover .about-check__btn-content p {
   color: #212121;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2719,7 +2894,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 85, src/scss/_components/about/_check.scss */
+/* line 91, src/scss/_components/about/_check.scss */
 .about-check__btn-border {
   position: absolute;
   top: 2px;
@@ -2735,7 +2910,7 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 96, src/scss/_components/about/_check.scss */
+/* line 102, src/scss/_components/about/_check.scss */
 .about-check__btn-content {
   position: absolute;
   top: 0;
@@ -2753,7 +2928,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 105, src/scss/_components/about/_check.scss */
+/* line 111, src/scss/_components/about/_check.scss */
 .about-check__btn-content > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2771,7 +2946,7 @@ picture {
   height: 100%;
 }
 
-/* line 112, src/scss/_components/about/_check.scss */
+/* line 118, src/scss/_components/about/_check.scss */
 .about-check__btn-content > div:nth-of-type(1) {
   background-color: #ffffff;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -2779,7 +2954,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 116, src/scss/_components/about/_check.scss */
+/* line 122, src/scss/_components/about/_check.scss */
 .about-check__btn-content > div:nth-of-type(2) {
   background-color: #212121;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -2787,7 +2962,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 122, src/scss/_components/about/_check.scss */
+/* line 128, src/scss/_components/about/_check.scss */
 .about-check__btn-content span {
   width: 63px;
   height: 3px;
@@ -2797,7 +2972,7 @@ picture {
   transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
-/* line 129, src/scss/_components/about/_check.scss */
+/* line 135, src/scss/_components/about/_check.scss */
 .about-check__btn-content p {
   position: relative;
   top: 4px;
@@ -2833,7 +3008,14 @@ picture {
   width: 180px;
 }
 
-/* line 19, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1279px) {
+  /* line 14, src/scss/_components/about/_video.scss */
+  .about-video__wrapper-right {
+    width: 150px;
+  }
+}
+
+/* line 22, src/scss/_components/about/_video.scss */
 .about-video__container {
   position: relative;
   width: 100%;
@@ -2841,7 +3023,7 @@ picture {
   background-color: #d8d8d8;
 }
 
-/* line 25, src/scss/_components/about/_video.scss */
+/* line 28, src/scss/_components/about/_video.scss */
 .about-video__container video {
   position: absolute;
   top: 0;
@@ -2854,7 +3036,7 @@ picture {
      object-position: center;
 }
 
-/* line 36, src/scss/_components/about/_video.scss */
+/* line 39, src/scss/_components/about/_video.scss */
 .about-video__content {
   z-index: 2;
   position: relative;
@@ -2875,7 +3057,14 @@ picture {
   padding: 95px 80px 92px;
 }
 
-/* line 46, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 39, src/scss/_components/about/_video.scss */
+  .about-video__content {
+    padding: 50px 30px;
+  }
+}
+
+/* line 52, src/scss/_components/about/_video.scss */
 .about-video__title {
   font-size: 50px;
   color: #FFFFFF;
@@ -2883,7 +3072,21 @@ picture {
   line-height: 64px;
 }
 
-/* line 54, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1365px) {
+  /* line 52, src/scss/_components/about/_video.scss */
+  .about-video__title {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 52, src/scss/_components/about/_video.scss */
+  .about-video__title {
+    font-size: 40px;
+  }
+}
+
+/* line 66, src/scss/_components/about/_video.scss */
 .about-video__subtitle {
   font-size: 30px;
   color: #FFFFFF;
@@ -2891,7 +3094,21 @@ picture {
   line-height: 60px;
 }
 
-/* line 62, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1365px) {
+  /* line 66, src/scss/_components/about/_video.scss */
+  .about-video__subtitle {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 66, src/scss/_components/about/_video.scss */
+  .about-video__subtitle {
+    font-size: 22px;
+  }
+}
+
+/* line 80, src/scss/_components/about/_video.scss */
 .about-video__divider {
   display: block;
   max-width: 100%;
@@ -2900,7 +3117,14 @@ picture {
   margin-left: 40px;
 }
 
-/* line 70, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 80, src/scss/_components/about/_video.scss */
+  .about-video__divider {
+    margin-left: 0;
+  }
+}
+
+/* line 91, src/scss/_components/about/_video.scss */
 .about-video__play {
   z-index: 5;
   overflow: hidden;
@@ -2929,7 +3153,15 @@ picture {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 83, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 91, src/scss/_components/about/_video.scss */
+  .about-video__play {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* line 108, src/scss/_components/about/_video.scss */
 .about-video__play:hover {
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
@@ -2943,7 +3175,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 90, src/scss/_components/about/_video.scss */
+/* line 115, src/scss/_components/about/_video.scss */
 .about-video__play.is-play .icon-font {
   -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -2952,21 +3184,21 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 93, src/scss/_components/about/_video.scss */
+/* line 118, src/scss/_components/about/_video.scss */
 .about-video__play.is-play .icon-font.icon-play {
   opacity: 0;
   -webkit-transform: rotate3d(0, 1, 0, 90deg);
           transform: rotate3d(0, 1, 0, 90deg);
 }
 
-/* line 97, src/scss/_components/about/_video.scss */
+/* line 122, src/scss/_components/about/_video.scss */
 .about-video__play.is-play .icon-font.icon-pause {
   opacity: 1;
   -webkit-transform: rotate3d(0, 1, 0, 0deg);
           transform: rotate3d(0, 1, 0, 0deg);
 }
 
-/* line 104, src/scss/_components/about/_video.scss */
+/* line 129, src/scss/_components/about/_video.scss */
 .about-video__play .icon-font {
   position: absolute;
   color: #d8d8d8;
@@ -2983,20 +3215,20 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 112, src/scss/_components/about/_video.scss */
+/* line 137, src/scss/_components/about/_video.scss */
 .about-video__play .icon-font.icon-play {
   position: relative;
   left: 3px;
 }
 
-/* line 116, src/scss/_components/about/_video.scss */
+/* line 141, src/scss/_components/about/_video.scss */
 .about-video__play .icon-font.icon-pause {
   opacity: 0;
   -webkit-transform: rotate3d(0, 1, 0, 90deg);
           transform: rotate3d(0, 1, 0, 90deg);
 }
 
-/* line 123, src/scss/_components/about/_video.scss */
+/* line 148, src/scss/_components/about/_video.scss */
 .about-video__action {
   z-index: 10;
   position: absolute;
@@ -3015,12 +3247,19 @@ picture {
           align-items: center;
 }
 
-/* line 135, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 148, src/scss/_components/about/_video.scss */
+  .about-video__action {
+    padding-right: 30px;
+  }
+}
+
+/* line 163, src/scss/_components/about/_video.scss */
 .about-video__action > div:nth-of-type(1) {
   width: 130px;
 }
 
-/* line 138, src/scss/_components/about/_video.scss */
+/* line 166, src/scss/_components/about/_video.scss */
 .about-video__action > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -3030,12 +3269,34 @@ picture {
   max-width: 100%;
 }
 
-/* line 143, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 166, src/scss/_components/about/_video.scss */
+  .about-video__action > div:nth-of-type(2) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* line 175, src/scss/_components/about/_video.scss */
 .about-video__action > div:nth-of-type(3) {
   width: 130px;
 }
 
-/* line 149, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 175, src/scss/_components/about/_video.scss */
+  .about-video__action > div:nth-of-type(3) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+/* line 185, src/scss/_components/about/_video.scss */
 .about-video__time {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3047,20 +3308,35 @@ picture {
           align-items: center;
 }
 
-/* line 153, src/scss/_components/about/_video.scss */
+/* line 189, src/scss/_components/about/_video.scss */
 .about-video__time > * {
   font-size: 15px;
   color: #FFFFFF;
   letter-spacing: 1px;
 }
 
-/* line 160, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 189, src/scss/_components/about/_video.scss */
+  .about-video__time > * {
+    font-size: 14px;
+  }
+}
+
+/* line 199, src/scss/_components/about/_video.scss */
 .about-video__time-divider {
   margin-left: 18px;
   margin-right: 18px;
 }
 
-/* line 166, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 199, src/scss/_components/about/_video.scss */
+  .about-video__time-divider {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* line 209, src/scss/_components/about/_video.scss */
 .about-video__volume {
   position: relative;
   top: -3px;
@@ -3078,17 +3354,29 @@ picture {
           justify-content: center;
 }
 
-/* line 174, src/scss/_components/about/_video.scss */
+/* line 217, src/scss/_components/about/_video.scss */
 .about-video__volume > div:nth-of-type(1) {
   padding-right: 15px;
 }
 
-/* line 177, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1023px) {
+  /* line 220, src/scss/_components/about/_video.scss */
+  .about-video__volume > div:nth-of-type(2) {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 1px;
+    max-width: 100%;
+  }
+}
+
+/* line 227, src/scss/_components/about/_video.scss */
 .about-video__volume > div:nth-of-type(3) {
   padding-left: 15px;
 }
 
-/* line 182, src/scss/_components/about/_video.scss */
+/* line 232, src/scss/_components/about/_video.scss */
 .about-video__volume-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3099,7 +3387,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 186, src/scss/_components/about/_video.scss */
+/* line 236, src/scss/_components/about/_video.scss */
 .about-video__volume-btn:hover {
   opacity: 0.75;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -3107,13 +3395,13 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 191, src/scss/_components/about/_video.scss */
+/* line 241, src/scss/_components/about/_video.scss */
 .about-video__volume-btn .icon-font {
   color: #ffffff;
   font-size: 20px;
 }
 
-/* line 197, src/scss/_components/about/_video.scss */
+/* line 247, src/scss/_components/about/_video.scss */
 .about-video__volume-progress {
   position: relative;
   display: -webkit-box;
@@ -3122,14 +3410,15 @@ picture {
   display: flex;
 }
 
-/* line 202, src/scss/_components/about/_video.scss */
+/* line 252, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range] {
   outline: none;
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 5px;
   margin: auto;
   padding: 0;
@@ -3145,7 +3434,7 @@ picture {
   background-repeat: no-repeat;
 }
 
-/* line 216, src/scss/_components/about/_video.scss */
+/* line 267, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-webkit-slider-runnable-track {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -3155,19 +3444,19 @@ picture {
           appearance: none;
 }
 
-/* line 222, src/scss/_components/about/_video.scss */
+/* line 273, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-moz-range-track {
   box-shadow: none;
   border: none;
   background: transparent;
 }
 
-/* line 227, src/scss/_components/about/_video.scss */
+/* line 278, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-moz-focus-outer {
   border: 0;
 }
 
-/* line 230, src/scss/_components/about/_video.scss */
+/* line 281, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
@@ -3179,7 +3468,7 @@ picture {
   background-color: #fff;
 }
 
-/* line 238, src/scss/_components/about/_video.scss */
+/* line 289, src/scss/_components/about/_video.scss */
 .about-video__volume input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
@@ -3188,7 +3477,7 @@ picture {
   background-color: #fff;
 }
 
-/* line 247, src/scss/_components/about/_video.scss */
+/* line 298, src/scss/_components/about/_video.scss */
 .about-video__progress {
   z-index: 5;
   position: absolute;
@@ -3203,14 +3492,14 @@ picture {
   background-color: rgba(255, 255, 255, 0.35);
 }
 
-/* line 257, src/scss/_components/about/_video.scss */
+/* line 308, src/scss/_components/about/_video.scss */
 .about-video__progress span {
   width: 0;
   height: 100%;
   background-color: #ffffff;
 }
 
-/* line 264, src/scss/_components/about/_video.scss */
+/* line 315, src/scss/_components/about/_video.scss */
 .about-video__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3237,12 +3526,19 @@ picture {
           transform: rotate(-180deg);
 }
 
-/* line 274, src/scss/_components/about/_video.scss */
+@media screen and (max-width: 1279px) {
+  /* line 315, src/scss/_components/about/_video.scss */
+  .about-video__nav {
+    padding: 0;
+  }
+}
+
+/* line 328, src/scss/_components/about/_video.scss */
 .about-video__nav-btn, .about-video__nav-circle {
   white-space: nowrap;
 }
 
-/* line 279, src/scss/_components/about/_video.scss */
+/* line 333, src/scss/_components/about/_video.scss */
 .about-video__nav-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3260,7 +3556,7 @@ picture {
   width: 44px;
 }
 
-/* line 287, src/scss/_components/about/_video.scss */
+/* line 341, src/scss/_components/about/_video.scss */
 .about-video__nav-btn:hover span {
   color: #3759f0;
   -webkit-transition: color 0.3s ease-in-out;
@@ -3268,34 +3564,34 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 293, src/scss/_components/about/_video.scss */
+/* line 347, src/scss/_components/about/_video.scss */
 .about-video__nav-btn.is-active {
   width: 44px;
   height: 116px;
   background-color: #3759f0;
 }
 
-/* line 298, src/scss/_components/about/_video.scss */
+/* line 352, src/scss/_components/about/_video.scss */
 .about-video__nav-btn.is-active span {
   color: #ffffff;
 }
 
-/* line 303, src/scss/_components/about/_video.scss */
+/* line 357, src/scss/_components/about/_video.scss */
 .about-video__nav-btn-1 {
   height: 116px;
 }
 
-/* line 306, src/scss/_components/about/_video.scss */
+/* line 360, src/scss/_components/about/_video.scss */
 .about-video__nav-btn-2 {
   height: 60px;
 }
 
-/* line 309, src/scss/_components/about/_video.scss */
+/* line 363, src/scss/_components/about/_video.scss */
 .about-video__nav-btn-3 {
   height: 120px;
 }
 
-/* line 313, src/scss/_components/about/_video.scss */
+/* line 367, src/scss/_components/about/_video.scss */
 .about-video__nav-btn span {
   position: relative;
   left: -3px;
@@ -3310,7 +3606,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 325, src/scss/_components/about/_video.scss */
+/* line 379, src/scss/_components/about/_video.scss */
 .about-video__nav-circle {
   display: block;
   width: 8px;
@@ -3335,7 +3631,14 @@ picture {
   padding-bottom: 128px;
 }
 
-/* line 8, src/scss/_components/about/_indication.scss */
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/about/_indication.scss */
+  .about-indication {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 11, src/scss/_components/about/_indication.scss */
 .about-indication__wrapper {
   position: relative;
   display: -webkit-box;
@@ -3353,7 +3656,14 @@ picture {
           box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.17);
 }
 
-/* line 18, src/scss/_components/about/_indication.scss */
+@media screen and (max-width: 1023px) {
+  /* line 11, src/scss/_components/about/_indication.scss */
+  .about-indication__wrapper {
+    padding: 15px 342px 17px 121px;
+  }
+}
+
+/* line 24, src/scss/_components/about/_indication.scss */
 .about-indication__content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3369,7 +3679,7 @@ picture {
           justify-content: flex-start;
 }
 
-/* line 23, src/scss/_components/about/_indication.scss */
+/* line 29, src/scss/_components/about/_indication.scss */
 .about-indication__content span {
   width: 12px;
   height: 12px;
@@ -3377,25 +3687,25 @@ picture {
           border-radius: 50%;
 }
 
-/* line 28, src/scss/_components/about/_indication.scss */
+/* line 34, src/scss/_components/about/_indication.scss */
 .about-indication__content span:nth-of-type(1) {
   margin-right: 14px;
   border: 2px solid rgba(25, 25, 25, 0.25);
 }
 
-/* line 32, src/scss/_components/about/_indication.scss */
+/* line 38, src/scss/_components/about/_indication.scss */
 .about-indication__content span:nth-of-type(2) {
   margin-right: 14px;
   border: 2px solid rgba(25, 25, 25, 0.5);
 }
 
-/* line 36, src/scss/_components/about/_indication.scss */
+/* line 42, src/scss/_components/about/_indication.scss */
 .about-indication__content span:nth-of-type(3) {
   margin-right: 29px;
   border: 2px solid rgba(25, 25, 25, 0.75);
 }
 
-/* line 42, src/scss/_components/about/_indication.scss */
+/* line 48, src/scss/_components/about/_indication.scss */
 .about-indication__content i {
   width: 30px;
   height: 1px;
@@ -3403,7 +3713,7 @@ picture {
   border: 1px solid rgba(25, 25, 25, 0.5);
 }
 
-/* line 49, src/scss/_components/about/_indication.scss */
+/* line 55, src/scss/_components/about/_indication.scss */
 .about-indication__content p {
   width: 33px;
   height: 33px;
@@ -3412,7 +3722,7 @@ picture {
   border: 8px solid #181818;
 }
 
-/* line 57, src/scss/_components/about/_indication.scss */
+/* line 63, src/scss/_components/about/_indication.scss */
 .about-indication__line {
   position: absolute;
   top: 50%;
@@ -3429,13 +3739,13 @@ picture {
   border: 1px solid #202020;
 }
 
-/* line 68, src/scss/_components/about/_indication.scss */
+/* line 74, src/scss/_components/about/_indication.scss */
 .about-indication__line span:nth-of-type(1) {
   width: 155px;
   background-color: #ffffff;
 }
 
-/* line 72, src/scss/_components/about/_indication.scss */
+/* line 78, src/scss/_components/about/_indication.scss */
 .about-indication__line span:nth-of-type(2) {
   width: -webkit-calc(250px - 155px);
   width: calc(250px - 155px);

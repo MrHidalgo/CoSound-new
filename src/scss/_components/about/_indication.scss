@@ -4,6 +4,9 @@
 	display: flex;
 	justify-content: flex-start;
 	padding-bottom: 128px;
+	@include adaptive(1279) {
+		padding-bottom: 100px;
+	}
 
 	&__wrapper {
 		position: relative;
@@ -13,6 +16,9 @@
 		padding: 15px 342px 17px 181px;
 		background-color: #FFFFFF;
 		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.17);
+		@include adaptive(1023) {
+			padding: 15px 342px 17px 121px;
+		}
 	}
 
 	&__content {
