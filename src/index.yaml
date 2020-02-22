@@ -6,4 +6,4 @@ PageList:
   ready: 30
 - file: about.html
   titleName: About
-  ready: 55
+  ready: 100
