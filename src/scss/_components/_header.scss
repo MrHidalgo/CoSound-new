@@ -25,6 +25,9 @@
 		@include adaptive(1023) {
 			padding-top: 0;
 		}
+		@include adaptive(767) {
+			height: 75px;
+		}
 
 		&-left {
 			padding-right: 47px;
@@ -35,23 +38,20 @@
 
 		&-middle {
 			padding-top: 6px;
-			@include adaptive(1023) {
-				padding-top: 0;
-			}
 		}
 
 		&-right {
 			margin-left: auto;
 			padding-top: 6px;
-			@include adaptive(1023) {
-				padding-top: 0;
-			}
 		}
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
+		@include adaptive(767) {
+			display: none;
+		}
 
 		&-link {
 			position: relative;
@@ -129,6 +129,9 @@
 		}
 		@include adaptive(1023) {
 			font-size: 14px;
+		}
+		@include adaptive(767) {
+			font-size: 12px;
 		}
 	}
 }

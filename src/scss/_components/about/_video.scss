@@ -4,17 +4,27 @@
 	&__wrapper {
 		display: flex;
 		min-height: 600px;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		&-left {
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
+			@include adaptive(767) {
+				min-height: 75vh;
+			}
 		}
 
 		&-right {
 			width: 180px;
 			@include adaptive(1279) {
 				width: 150px;
+			}
+			@include adaptive(767) {
+				width: 100%;
+				padding: 30px 15px;
 			}
 		}
 	}
@@ -26,6 +36,7 @@
 		background-color: #d8d8d8;
 
 		video {
+			z-index: 0;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -47,6 +58,9 @@
 		@include adaptive(1023) {
 			padding: 50px 30px;
 		}
+		@include adaptive(767) {
+			padding: 30px 15px;
+		}
 	}
 
 	&__title {
@@ -60,6 +74,9 @@
 		}
 		@include adaptive(1023) {
 			font-size: 40px;
+		}
+		@include adaptive(767) {
+			font-size: 35px;
 		}
 	}
 
@@ -75,6 +92,9 @@
 		@include adaptive(1023) {
 			font-size: 22px;
 		}
+		@include adaptive(767) {
+			font-size: 18px;
+		}
 	}
 
 	&__divider {
@@ -86,10 +106,14 @@
 		@include adaptive(1023) {
 			margin-left: 0;
 		}
+		@include adaptive(767) {
+			transform-origin: 0 0;
+			transform: scale(0.5);
+		}
 	}
 
 	&__play {
-		z-index: 5;
+		z-index: 15;
 		overflow: hidden;
 		position: relative;
 		display: flex;
@@ -103,6 +127,10 @@
 		@include adaptive(1023) {
 			width: 80px;
 			height: 80px;
+		}
+		@include adaptive(767) {
+			width: 75px;
+			height: 75px;
 		}
 
 		&:hover {
@@ -133,6 +161,9 @@
 			transform-origin: 0 0;
 			backface-visibility: hidden;
 			@include transition(opacity, transform);
+			@include adaptive(767) {
+				font-size: 26px;
+			}
 
 			&.icon-play {
 				position: relative;
@@ -150,18 +181,32 @@
 		position: absolute;
 		bottom: 44px;
 		left: 0;
+		display: flex;
+		align-items: center;
 		width: 100%;
 		height: 30px;
 		padding: 0 41px;
-		display: flex;
-		align-items: center;
 		@include adaptive(1023) {
 			padding-right: 30px;
+		}
+		@include adaptive(767) {
+			left: auto;
+			right: 0;
+			bottom: 30px;
+			flex-direction: column;
+			align-items: flex-end;
+			height: auto;
+			max-width: calc(100% - 100px);
+			padding-left: 0;
+			padding-right: 15px;
 		}
 
 		> div {
 			&:nth-of-type(1) {
 				width: 130px;
+				@include adaptive(767) {
+					display: none;
+				}
 			}
 			&:nth-of-type(2) {
 				flex: 1;
@@ -171,12 +216,20 @@
 					padding-left: 15px;
 					padding-right: 15px;
 				}
+				@include adaptive(767) {
+					padding-left: 0;
+					padding-right: 0;
+					padding-bottom: 30px;
+				}
 			}
 			&:nth-of-type(3) {
 				width: 130px;
 				@include adaptive(1023) {
 					display: flex;
 					justify-content: flex-end;
+				}
+				@include adaptive(767) {
+
 				}
 			}
 		}
@@ -324,10 +377,17 @@
 		@include adaptive(1279) {
 			padding: 0;
 		}
+		@include adaptive(767) {
+			flex-direction: row;
+			transform: rotate(0);
+		}
 
 		&-btn,
 		&-circle {
 			white-space: nowrap;
+			@include adaptive(767) {
+				white-space: normal;
+			}
 		}
 
 		&-btn {
@@ -336,6 +396,12 @@
 			justify-content: center;
 			background-color: transparent;
 			width: 44px;
+			@include adaptive(767) {
+				width: calc(100% / 3);
+				height: 44px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 
 			&:hover {
 				span {
@@ -348,6 +414,12 @@
 				width: 44px;
 				height: 116px;
 				background-color: #3759f0;
+				@include adaptive(767) {
+					width: calc(100% / 3);
+					height: 44px;
+					padding-left: 15px;
+					padding-right: 15px;
+				}
 
 				span {
 					color: #ffffff;
@@ -356,12 +428,21 @@
 
 			&-1 {
 				height: 116px;
+				@include adaptive(767) {
+					height: 44px;
+				}
 			}
 			&-2 {
 				height: 60px;
+				@include adaptive(767) {
+					height: 44px;
+				}
 			}
 			&-3 {
 				height: 120px;
+				@include adaptive(767) {
+					height: 44px;
+				}
 			}
 
 			span {
@@ -373,6 +454,12 @@
 				color: #252525;
 				letter-spacing: 2px;
 				@include transition(color);
+				@include adaptive(767) {
+					top: 3px;
+					left: 0;
+					transform: rotate(0);
+					text-align: center;
+				}
 			}
 		}
 
@@ -384,6 +471,9 @@
 			margin-bottom: 25px;
 			border-radius: 50%;
 			background-color: #181818;
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 	}
 }

@@ -12,12 +12,17 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		height: 150px;
+		min-height: 150px;
 		padding: 15px 342px 17px 181px;
 		background-color: #FFFFFF;
 		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.17);
 		@include adaptive(1023) {
 			padding: 15px 342px 17px 121px;
+		}
+		@include adaptive(767) {
+			justify-content: center;
+			width: 100%;
+			padding: 30px;
 		}
 	}
 
@@ -69,6 +74,9 @@
 		width: 250px;
 		height: 5px;
 		border: 1px solid #202020;
+		@include adaptive(767) {
+			display: none;
+		}
 
 		span {
 			&:nth-of-type(1) {

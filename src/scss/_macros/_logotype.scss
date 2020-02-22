@@ -4,6 +4,9 @@
 	&--footer {
 		padding-left: 4px;
 		padding-bottom: 51px;
+		@include adaptive(767) {
+			padding-left: 0;
+		}
 
 		.logo {
 			&__image {

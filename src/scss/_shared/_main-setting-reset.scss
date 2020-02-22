@@ -36,6 +36,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
 	padding-top: 100px;
+	@include adaptive(767) {
+		padding-top: 75px;
+	}
 
   > .body {
     display: flex;

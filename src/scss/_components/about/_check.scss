@@ -3,17 +3,26 @@
 .about-check {
 	display: flex;
 	justify-content: flex-start;
+	@include adaptive(767) {
+		justify-content: unset;
+	}
 
 	&__wrapper {
 		position: relative;
 		display: flex;
 		align-items: center;
-		height: 150px;
+		min-height: 150px;
 		padding: 18px 140px 15px 57px;
 		background-color: #3759F0;
 		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.17);
 		@include adaptive(1023) {
 			padding: 18px 140px 15px 35px;
+		}
+		@include adaptive(767) {
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 100%;
+			padding: 30px;
 		}
 	}
 
@@ -33,12 +42,22 @@
 		@include adaptive(1365) {
 			font-size: 22px;
 		}
+		@include adaptive(767) {
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 30px;
+			font-size: 20px;
+			text-align: center;
+		}
 
 		.icon-font {
 			position: relative;
 			top: -2px;
 			margin-left: 12px;
 			font-size: 21px;
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 	}
 
@@ -50,6 +69,13 @@
 		height: 51px;
 		width: 100%;
 		max-width: 221px;
+		@include adaptive(767) {
+			position: static;
+			right: 0;
+			transform: translate(0);
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		&:hover {
 			.about-check__btn {
@@ -140,6 +166,10 @@
 				font-size: 15px;
 				color: #FFFFFF;
 				@include transition(color);
+				@include adaptive(767) {
+					top: 2px;
+					left: 0;
+				}
 			}
 		}
 	}

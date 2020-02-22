@@ -11,6 +11,9 @@
 		padding-top: 50px;
 		padding-bottom: 80px;
 	}
+	@include adaptive(767) {
+		padding-bottom: 55px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -18,10 +21,16 @@
 		max-width: 933px;
 		margin-left: auto;
 		margin-right: auto;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		&-left,
 		&-right {
 			width: 50%;
+			@include adaptive(767) {
+				width: 100%;
+			}
 		}
 
 		&-left {
@@ -29,11 +38,18 @@
 			@include adaptive(1023) {
 				padding-right: 20px;
 			}
+			@include adaptive(767) {
+				padding: 0;
+			}
 		}
+
 		&-right {
 			padding-left: 49px;
 			@include adaptive(1023) {
 				padding-left: 20px;
+			}
+			@include adaptive(767) {
+				padding: 0;
 			}
 		}
 	}
