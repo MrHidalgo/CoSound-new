@@ -2,6 +2,63 @@
 
 section#main.main
 
+	.main__bg
+		div
+		div
+
 	.main__wrapper
+
+		.main__slider
+
+			mixin swiperContent()
+				.swiper-slide(style='background-image:url("img/img-main-slide-1@2x.jpg")')
+				.swiper-slide(style='background-image:url("img/img-main-slide-2@2x.jpg")')
+				.swiper-slide(style='background-image:url("img/img-main-slide-3@2x.jpg")')
+				.swiper-slide(style='background-image:url("img/img-main-slide-4@2x.jpg")')
+
+			+swiper('mainSlider', 'swiperContent', false, false, false)
+
+		.main__content
+			.main__content-left
+
+				.logo.logo--main
+					a.logo__btn(href="/")
+						img.logo__image(src='img/logo.svg')
+
+				p.main__subtitle!= "a social network & marketplace<br>created for the music industry"
+
+				.subscribe
+					input(type='text' id="subscribe" name='subscribe' placeholder='pre-register for our beta')
+					label(for='subscribe')
+						button(type='submit') SIGN UP
+
+			.main__content-right
+				div
+					i.icon-font.icon-arrow-right
+				div
+					.main__title
+						img(src="img/title.svg" alt="")
+					.main__divider
+
+			.main__indicator
+				span 01
+
+			a.main__btn(href="#")
+				i.icon-font.icon-menu
+
+			.main__arrow-wrapper
+				a.main__arrow.main__arrow--prev(href="#")
+					i.icon-font.icon-arrow-right
+				a.main__arrow.main__arrow--next(href="#")
+					i.icon-font.icon-arrow-right
+
+			.main__info
+				p hey, is that you?
+				i
+				span 01
+
+			.main__line-wrapper
+				.main__line.main__line-1
+				.main__line.main__line-2
 
 // SECTION :: END

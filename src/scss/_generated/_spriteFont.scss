@@ -48,26 +48,29 @@
 	@if $filename == like {
 		$char: "\E007";
 	}
-	@if $filename == mute {
+	@if $filename == menu {
 		$char: "\E008";
 	}
-	@if $filename == pause {
+	@if $filename == mute {
 		$char: "\E009";
 	}
-	@if $filename == play {
+	@if $filename == pause {
 		$char: "\E00A";
 	}
-	@if $filename == share {
+	@if $filename == play {
 		$char: "\E00B";
 	}
-	@if $filename == sound {
+	@if $filename == share {
 		$char: "\E00C";
 	}
-	@if $filename == twitter {
+	@if $filename == sound {
 		$char: "\E00D";
 	}
-	@if $filename == youtube {
+	@if $filename == twitter {
 		$char: "\E00E";
+	}
+	@if $filename == youtube {
+		$char: "\E00F";
 	}
 
 	@return $char;
@@ -110,6 +113,10 @@
 }
 .icon-like {
 	@include icon(like);
+
+}
+.icon-menu {
+	@include icon(menu);
 
 }
 .icon-mute {

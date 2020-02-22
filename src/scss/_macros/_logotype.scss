@@ -18,6 +18,17 @@
 		}
 	}
 
+	&--main {
+		padding-bottom: 31px;
+
+		.logo {
+			&__image {
+				width: 100%;
+				max-width: 272px;
+			}
+		}
+	}
+
 	&__btn {
 		display: flex;
 		align-items: flex-start;

@@ -32,6 +32,7 @@
 		align-items: center;
 		height: 100px;
 		padding-top: 5px;
+		backface-visibility: hidden;
 		@include transition(height 0.4s);
 		@include adaptive(1023) {
 			padding-top: 0;
