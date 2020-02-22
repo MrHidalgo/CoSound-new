@@ -40,7 +40,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		min-height: 100%;
-		padding: 86px 80px 90px;
+		padding: 95px 80px 92px;
 	}
 
 	&__title {
@@ -48,14 +48,14 @@
 		font-size: 50px;
 		color: #FFFFFF;
 		letter-spacing: -1px;
-		line-height: 60px;
+		line-height: 64px;
 	}
 
 	&__subtitle {
 		@extend %fontAndaleMonoMTStd;
 		font-size: 30px;
 		color: #FFFFFF;
-		letter-spacing: -1px;
+		letter-spacing: 0.9px;
 		line-height: 60px;
 	}
 
@@ -63,7 +63,7 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
-		margin-top: 15px;
+		margin-top: 6px;
 		margin-left: 40px;
 	}
 
@@ -117,11 +117,11 @@
 	&__action {
 		z-index: 10;
 		position: absolute;
-		bottom: 40px;
+		bottom: 44px;
 		left: 0;
 		width: 100%;
 		height: 30px;
-		padding: 0 45px;
+		padding: 0 41px;
 		display: flex;
 		align-items: center;
 
@@ -158,6 +158,8 @@
 	}
 
 	&__volume {
+		position: relative;
+		top: -3px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -218,15 +220,15 @@
 			width: 20px;
 			height: 20px;
 			border-radius: 100%;
-			border: 4px solid #fff;
-			background-color: #000;
+			border: 5px solid #000;
+			background-color: #fff;
 		}
 		input[type=range]::-moz-range-thumb {
 			width: 20px;
 			height: 20px;
 			border-radius: 100%;
-			border: 4px solid #fff;
-			background-color: #000;
+			border: 5px solid #000;
+			background-color: #fff;
 		}
 	}
 
@@ -254,6 +256,7 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		padding: 0 36px 14px 0;
 		transform: rotate(-180deg);
 
 		&-btn,

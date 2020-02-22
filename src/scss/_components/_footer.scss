@@ -1,18 +1,18 @@
 // FOOTER :: START
 
 .footer {
-	padding-top: 81px;
+	padding-top: 87px;
 	padding-bottom: 48px;
 	background-color: #191919;
 
 	.c-grid {
-		max-width: 1170px;
+		max-width: 1220px;
 	}
 
 	&__wrapper {
 		&-1 {
 			display: flex;
-			padding-bottom: 70px;
+			padding-bottom: 72px;
 			@include adaptive(1023) {
 				flex-wrap: wrap;
 				padding-bottom: 35px;
@@ -37,9 +37,12 @@
 					}
 				}
 				&:nth-of-type(2) {
+					position: relative;
+					top: -2px;
 					width: 100%;
-					max-width: 274px;
+					max-width: 300px;
 					@include adaptive(1023) {
+						top: 0;
 						max-width: 50%;
 						padding-left: 15px;
 					}
@@ -49,12 +52,17 @@
 					}
 				}
 				&:nth-of-type(3) {
+					position: relative;
+					top: -2px;
 					flex: 1;
 					min-width: 1px;
 					max-width: 100%;
-					padding-left: 96px;
+					padding-left: 69px;
+					padding-right: 30px;
 					@include adaptive(1279) {
+						top: 0;
 						padding-left: 50px;
+						padding-right: 0;
 					}
 					@include adaptive(1023) {
 						width: 100%;
@@ -69,7 +77,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding-top: 26px;
+			padding-top: 30px;
 			border-top: 1px solid rgba(255,255,255,0.15);
 			@include adaptive(767) {
 				flex-direction: column-reverse;
@@ -91,7 +99,7 @@
 	}
 
 	&__title {
-		padding-bottom: 25px;
+		padding-bottom: 24px;
 		@extend %fontAndaleMonoMTStd;
 		font-size: 16px;
 		color: #F0AF37;
@@ -101,20 +109,34 @@
 	}
 
 	&__description {
-		padding-bottom: 35px;
+		padding-bottom: 39px;
 		font-size: 14px;
 		color: #A8A8AA;
+		line-height: 1.6;
 		@include adaptive(767) {
 			text-align: center;
+		}
+
+		&-2 {
+			padding-bottom: 31px;
 		}
 	}
 
 	&__nav {
 		&-wrapper {
+			position: relative;
+			left: -5px;
 			display: flex;
+			@include adaptive(1279) {
+				left: 0;
+			}
 
 			> div {
 				width: 50%;
+
+				&:nth-of-type(2) {
+					padding-left: 14px;
+				}
 			}
 		}
 

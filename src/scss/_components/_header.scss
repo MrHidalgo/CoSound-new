@@ -9,6 +9,8 @@
 	background-color: #2d3136;
 
 	.c-grid {
+		position: relative;
+		left: -2px;
 		max-width: 1330px;
 	}
 
@@ -16,15 +18,19 @@
 		display: flex;
 		align-items: center;
 		height: 100px;
+		padding-top: 5px;
 
 		&-left {
-			padding-right: 59px;
+			padding-right: 47px;
 		}
 
-		&-middle {}
+		&-middle {
+			padding-top: 6px;
+		}
 
 		&-right {
 			margin-left: auto;
+			padding-top: 6px;
 		}
 	}
 
@@ -43,7 +49,7 @@
 			letter-spacing: 1px;
 
 			&:not(:last-of-type) {
-				margin-right: 38px;
+				margin-right: 18px;
 			}
 
 			&:before,

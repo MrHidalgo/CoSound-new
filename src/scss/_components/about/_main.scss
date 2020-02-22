@@ -17,7 +17,7 @@
 		z-index: 2;
 		position: relative;
 		display: flex;
-		padding: 57px 58px 44px;
+		padding: 77px 58px 62px;
 		background-color: #3759f0;
 		box-shadow: 0 20px 40px 0 rgba(0,0,0,0.24);
 
@@ -48,16 +48,16 @@
 		animation-timing-function: ease-in-out;
 
 		&-1 {
-			top: 0;
-			left: 0;
+			top: -20px;
+			left: -7px;
 			width: 4px;
 			height: 70px;
 			animation-name: animateLine1;
 		}
 
 		&-2 {
-			right: 0;
-			bottom: 0;
+			right: 21px;
+			bottom: -18px;
 			width: 140px;
 			height: 4px;
 			animation-delay: 1s;
