@@ -87,6 +87,111 @@
 		})
 	};
 
+
+	const initVideo = () => {
+		const vid = $("video")[0];
+
+		function playVid() {
+			vid.play();
+		}
+
+		function pauseVid() {
+			vid.pause();
+		}
+
+		function muteVid() {
+			vid.volume = 0;
+			$('[volume-video-js]').val(0);
+		}
+
+		function soundsVid() {
+			vid.volume = 1.0;
+			$('[volume-video-js]').val(100);
+		}
+
+		function fancyTimeFormat(time) {
+			const hrs = Math.floor(time / 3600),
+				mins = Math.floor((time % 3600) / 60),
+				secs = Math.floor(time % 60);
+
+			let ret = "";
+
+			if(hrs > 0) {
+				ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+			}
+
+			ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+			ret += "" + secs;
+
+			return ret;
+		}
+
+		function onTrackedVideoFrame(currentTime, duration){
+			$("[currentTime-video-js]").text(fancyTimeFormat(currentTime));
+			$("[duration-video-js]").text(fancyTimeFormat(duration));
+		}
+
+		if(vid) {
+			$("#video").on("loadedmetadata", function(ev){
+				onTrackedVideoFrame(ev.currentTarget.currentTime, ev.currentTarget.duration);
+			});
+
+			vid.ontimeupdate = () => {
+				let percentage = (vid.currentTime / vid.duration) * 100;
+
+				$("[progress-video-js] span").css("width", percentage + "%");
+
+				onTrackedVideoFrame(vid.currentTime, vid.duration);
+
+				if (percentage === 100) {
+					$("[progress-video-js] span").css("width", "0");
+				}
+			};
+
+			$("[progress-video-js]").on("click", (ev) => {
+				let offset = $(ev.currentTarget).offset(),
+					left = (ev.pageX - offset.left),
+					totalWidth = $("[progress-video-js]").width(),
+					percentage = (left / totalWidth),
+					vidTime = vid.duration * percentage;
+
+				vid.currentTime = vidTime;
+			});
+
+			$('[video-play-js]').on('click', (ev) => {
+				if($(ev.currentTarget).hasClass('is-play')) {
+					$(ev.currentTarget).removeClass('is-play');
+					pauseVid();
+				} else {
+					$(ev.currentTarget).addClass('is-play');
+					playVid();
+				}
+			});
+
+			$('[mute-video-js]').on('click', (ev) => {
+				muteVid();
+				$('[volume-video-js]').trigger('input');
+			});
+
+			$('[sounds-video-js]').on('click', (ev) => {
+				soundsVid();
+				$('[volume-video-js]').trigger('input');
+			});
+
+			$('[volume-video-js]').on('input', function (ev) {
+				let min = ev.target.min,
+					max = ev.target.max,
+					val = ev.target.value;
+
+				vid.volume = (val / 100);
+
+				$(ev.target).css({
+					'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
+				});
+			}).trigger('input');
+		}
+	};
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -109,6 +214,7 @@
 		// callback
 		initNewsNav();
 		initTabs();
+		initVideo();
 		// ==========================================
 	};
 	initNative();

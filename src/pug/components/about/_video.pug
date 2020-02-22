@@ -1,0 +1,59 @@
+// SECTION :: START
+
+section#about-video.about-video
+
+	.about-video__wrapper
+
+		.about-video__wrapper-left
+
+			.about-video__container
+
+				video#video()
+					source(src='media/video.mp4' type="video/mp4")
+
+				a.about-video__progress(href="#" progress-video-js)
+					span
+
+				.about-video__action
+					div
+					div
+
+						.about-video__volume
+							div
+								a.about-video__volume-btn.about-video__volume-btn--mute(href="#" mute-video-js)
+									i.icon-font.icon-mute
+							div
+								input.about-video__volume-progress(type='range' name='' min='0' max='100' value='100' volume-video-js)
+							div
+								a.about-video__volume-btn.about-video__volume-btn--sound(href="#" sounds-video-js)
+									i.icon-font.icon-sound
+
+					div
+						.about-video__time
+							.about-video__time-current(currentTime-video-js) 0:00
+							.about-video__time-divider /
+							.about-video__time-max(duration-video-js) 3:20
+
+				.about-video__content
+					div
+						p.about-video__title the cosound mission
+						p.about-video__subtitle why do we exsist?
+						img.about-video__divider(src="img/img-video-divider.svg" alt="")
+					div
+						a.about-video__play(href="#" video-play-js)
+							i.icon-font.icon-play
+							i.icon-font.icon-pause
+
+		.about-video__wrapper-right
+
+			.about-video__nav
+				a.about-video__nav-btn.about-video__nav-btn-1.is-active(href="#")
+					span BALMAIN
+				.about-video__nav-circle
+				a.about-video__nav-btn.about-video__nav-btn-2(href="#")
+					span CHANEL
+				.about-video__nav-circle
+				a.about-video__nav-btn.about-video__nav-btn-3(href="#")
+					span PACO RABANNE
+
+// SECTION :: END

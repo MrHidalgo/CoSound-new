@@ -3,7 +3,7 @@ ProjectTitle: CoSound
 PageList:
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 30
 - file: about.html
   titleName: About
-  ready: 1
+  ready: 30
