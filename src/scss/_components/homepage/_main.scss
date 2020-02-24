@@ -121,6 +121,7 @@
 
 		&-right {
 			display: flex;
+			justify-content: flex-end;
 			align-items: flex-end;
 			padding-right: 155px;
 			@include adaptive(1023) {
@@ -139,9 +140,9 @@
 					}
 				}
 				&:nth-of-type(2) {
-					flex: 1;
-					min-width: 1px;
-					max-width: 100%;
+					//flex: 1;
+					//min-width: 1px;
+					//max-width: 100%;
 					display: flex;
 					flex-direction: column;
 					align-items: flex-end;
