@@ -34,6 +34,9 @@
 			@include adaptive(1023) {
 				max-width: 300px;
 			}
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 	}
 
@@ -43,6 +46,10 @@
 		padding-top: 101px;
 		padding-left: 79px;
 		@include transition(opacity);
+		@include adaptive(767) {
+			padding-top: 75px;
+			padding-left: 50px;
+		}
 
 		&.is-overlay {
 			opacity: 0.9;
@@ -63,6 +70,9 @@
 			}
 			@include adaptive(1023) {
 				transform: translateX(calc(100% - 100px));
+			}
+			@include adaptive(767) {
+				transform: translateX(calc(100% - 75px));
 			}
 
 			&.is-open {
@@ -91,6 +101,10 @@
 				width: 100px;
 				height: 450px;
 			}
+			@include adaptive(767) {
+				width: 75px;
+				height: 400px;
+			}
 
 			p {
 				white-space: nowrap;
@@ -109,6 +123,10 @@
 				@include adaptive(1023) {
 					font-size: 36px;
 				}
+				@include adaptive(767) {
+					transform: rotate(-90deg) translate(-9px, 3px);
+					font-size: 30px;
+				}
 			}
 		}
 
@@ -124,6 +142,9 @@
 			}
 			@include adaptive(1023) {
 				padding: 45px 55px;
+			}
+			@include adaptive(767) {
+				padding: 45px 85px 45px 40px;
 			}
 		}
 	}
@@ -143,12 +164,18 @@
 				font-size: 13px;
 				color: rgba(#000000, 0.3);
 				letter-spacing: 0.08px;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 			}
 
 			p {
 				font-weight: bold;
 				font-size: 18px;
 				color: #191919;
+				@include adaptive(767) {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -220,6 +247,10 @@
 		justify-content: flex-end;
 		padding-top: 40px;
 		padding-right: 114px;
+		@include adaptive(767) {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
 
 		&-btn {
 			&:not(:first-of-type) {

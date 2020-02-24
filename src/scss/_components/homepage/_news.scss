@@ -4,6 +4,10 @@
 	position: relative;
 	top: -13px;
 	padding-bottom: 51px;
+	@include adaptive(767) {
+		top: 0;
+		padding-top: 30px;
+	}
 
 	&__wrapper {
 		&-1 {
@@ -18,6 +22,9 @@
 			display: flex;
 			justify-content: flex-end;
 			padding-right: 169px;
+			@include adaptive(767) {
+				padding-right: 0;
+			}
 		}
 
 		&-left,
@@ -36,6 +43,9 @@
 			@include adaptive(1279) {
 				max-width: 250px;
 			}
+			@include adaptive(767) {
+				max-width: 45%;
+			}
 
 			> div {
 				background-color: #191919;
@@ -46,11 +56,17 @@
 				@include adaptive(1279) {
 					padding: 45px 30px;
 				}
+				@include adaptive(767) {
+					padding: 30px 15px;
+				}
 
 				img {
 					margin-bottom: 32px;
 					@include adaptive(1279) {
 						margin-bottom: 30px;
+					}
+					@include adaptive(767) {
+						margin-bottom: 20px;
 					}
 				}
 			}
@@ -61,6 +77,10 @@
 				@include adaptive(1279) {
 					padding-left: 30px;
 					padding-bottom: 40px;
+				}
+				@include adaptive(767) {
+					padding-left: 15px;
+					padding-bottom: 30px;
 				}
 			}
 
@@ -73,6 +93,9 @@
 				@include adaptive(1279) {
 					padding-left: 30px;
 				}
+				@include adaptive(767) {
+					padding-left: 15px;
+				}
 			}
 
 			&--footer {
@@ -80,7 +103,7 @@
 				width: 100%;
 				height: 273px;
 				@include adaptive(1023) {
-					height: 125px;
+					display: none;
 				}
 
 				img {
@@ -105,6 +128,9 @@
 				width: calc(100% - 250px);
 				padding-top: 50px;
 			}
+			@include adaptive(767) {
+				width: 55%;
+			}
 
 			&--header {
 				display: flex;
@@ -119,6 +145,9 @@
 					padding-left: 30px;
 					padding-right: 30px;
 				}
+				@include adaptive(767) {
+					display: none;
+				}
 
 				> div {
 					> p {
@@ -130,6 +159,9 @@
 						@include adaptive(1279) {
 							font-size: 36px;
 						}
+						@include adaptive(767) {
+							font-size: 30px;
+						}
 					}
 
 					> span {
@@ -140,6 +172,9 @@
 						letter-spacing: 0;
 						@include adaptive(1279) {
 							font-size: 16px;
+						}
+						@include adaptive(767) {
+							font-size: 14px;
 						}
 					}
 				}
@@ -161,6 +196,12 @@
 					min-height: 508px;
 					padding: 45px 30px;
 				}
+				@include adaptive(1023) {
+					min-height: 400px;
+				}
+				@include adaptive(767) {
+					padding: 30px 15px;
+				}
 			}
 
 			&-title {
@@ -172,6 +213,9 @@
 				@include adaptive(1279) {
 					font-size: 28px;
 				}
+				@include adaptive(767) {
+					font-size: 22px;
+				}
 			}
 
 			&-subtitle {
@@ -182,6 +226,9 @@
 				letter-spacing: 0;
 				@include adaptive(1279) {
 					font-size: 16px;
+				}
+				@include adaptive(767) {
+					font-size: 14px;
 				}
 			}
 		}
@@ -200,6 +247,12 @@
 				background-color: #191919;
 				@include adaptive(1279) {
 					min-height: 508px;
+				}
+				@include adaptive(1023) {
+					min-height: 450px;
+				}
+				@include adaptive(767) {
+					min-height: 400px;
 				}
 			}
 
@@ -220,6 +273,14 @@
 				@include adaptive(1279) {
 					padding: 45px 30px;
 				}
+				@include adaptive(1023) {
+					max-width: 55%;
+				}
+				@include adaptive(767) {
+					max-width: calc(100% - 50px);
+					min-height: unset;
+					padding: 30px;
+				}
 			}
 		}
 	}
@@ -239,6 +300,17 @@
 				left: 0;
 				margin-bottom: 50px;
 			}
+			@include adaptive(767) {
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+		}
+
+		&-2 {
+			@include adaptive(767) {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 
@@ -250,6 +322,9 @@
 		line-height: 40px;
 		@include adaptive(1279) {
 			font-size: 36px;
+		}
+		@include adaptive(767) {
+			font-size: 30px;
 		}
 	}
 
@@ -314,12 +389,18 @@
 				color: rgba(#FFFFFF, 0.3);
 				letter-spacing: 0.08px;
 				line-height: 1.25;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 			}
 
 			p {
 				font-size: 18px;
 				color: rgba(#FFFFFF, 0.6);
 				letter-spacing: 0.11px;
+				@include adaptive(767) {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -340,6 +421,9 @@
 			font-size: 18px;
 			color: #FFFFFF;
 			letter-spacing: 0.11px;
+			@include adaptive(767) {
+				font-size: 16px;
+			}
 		}
 
 		.icon-font {
@@ -351,6 +435,10 @@
 			@include adaptive(1279) {
 				margin-left: 20px;
 				font-size: 20px;
+			}
+			@include adaptive(767) {
+				margin-left: 10px;
+				font-size: 14px;
 			}
 		}
 	}
@@ -366,6 +454,10 @@
 	&__btn {
 		display: flex;
 		align-items: center;
+		@include adaptive(767) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__share {
@@ -379,6 +471,10 @@
 		background-color: transparent;
 		border: 1px solid rgba(#FFFFFF, 0.5);
 		@include transition(border-color);
+		@include adaptive(767) {
+			margin-left: auto;
+			margin-top: 15px;
+		}
 
 		&:hover {
 			border-color: #fff;
@@ -458,13 +554,27 @@
 			justify-content: space-between;
 			width: 100%;
 			padding: 0 16px 30px 40px;
+			@include adaptive(767) {
+				align-items: flex-start;
+				flex-direction: column;
+				padding: 30px;
+			}
 
 			> div {
 				&:nth-of-type(1) {
 					padding-left: 5px;
+					@include adaptive(767) {
+						padding-left: 0;
+						padding-bottom: 15px;
+					}
 				}
 				&:nth-of-type(2) {
 					width: 100px;
+					@include adaptive(767) {
+						display: flex;
+						justify-content: flex-end;
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -474,6 +584,10 @@
 			font-size: 30px;
 			color: #FFFFFF;
 			letter-spacing: 0px;
+			@include adaptive(767) {
+				font-size: 26px;
+				text-align: left;
+			}
 		}
 
 		&-btn {
