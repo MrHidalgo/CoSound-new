@@ -4,7 +4,8 @@
 	padding-top: 10px;
 
 	&__title {
-		padding-bottom: 30px;
+		padding-left: 20px;
+		padding-bottom: 10px;
 		@extend %fontAndaleMonoMTStd;
 		font-size: 96px;
 		color: rgb(45,49,54);
@@ -22,7 +23,7 @@
 		max-width: 390px;
 		margin-left: auto;
 		margin-right: auto;
-		padding-bottom: 42px;
+		padding-bottom: 37px;
 		font-weight: 500;
 		font-size: 18px;
 		color: #000000;
@@ -44,8 +45,8 @@
 
 		&-line {
 			position: absolute;
-			top: 70px;
-			right: 0;
+			top: 67px;
+			right: 29px;
 			width: 3px;
 			height: 100px;
 			background-color: #181818;
@@ -64,13 +65,13 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
-		padding-bottom: 65px;
+		padding-bottom: 74px;
 
 		img {
 			display: block;
 			max-width: 100%;
 			height: auto;
-			transform: translateX(-180px);
+			transform: translateX(-174px);
 		}
 	}
 }

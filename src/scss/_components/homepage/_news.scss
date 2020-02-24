@@ -1,12 +1,14 @@
 // SECTION :: START
 
 .news {
-	padding-bottom: 68px;
+	position: relative;
+	top: -13px;
+	padding-bottom: 51px;
 
 	&__wrapper {
 		&-1 {
 			display: flex;
-			padding-bottom: 72px;
+			padding-bottom: 68px;
 		}
 
 		&-2 {
@@ -31,16 +33,16 @@
 			background-color: #191919;
 
 			&--header {
-				padding: 58px 50px 67px;
+				padding: 58px 59px 57px;
 
 				img {
-					margin-bottom: 27px;
+					margin-bottom: 32px;
 				}
 			}
 
 			&--body {
-				padding-left: 50px;
-				padding-bottom: 50px;
+				padding-left: 60px;
+				padding-bottom: 80px;
 			}
 
 			&--action {
@@ -54,7 +56,7 @@
 			&--footer {
 				position: relative;
 				width: 100%;
-				height: 270px;
+				height: 273px;
 
 				img {
 					position: absolute;
@@ -69,15 +71,14 @@
 		}
 
 		&-middle {
-			width: 100%;
-			max-width: 60%;
-			padding-top: 136px;
+			width: calc(100% + 113px);
+			padding-top: 132px;
 
 			&--header {
 				display: flex;
 				align-items: center;
 				min-height: 170px;
-				padding: 15px 50px 15px 75px;
+				padding: 30px 50px 15px 75px;
 				background-color: #3759f0;
 
 				> div {
@@ -86,6 +87,7 @@
 						font-size: 42px;
 						color: #FFFFFF;
 						letter-spacing: 0.11px;
+						line-height: 1;
 					}
 
 					> span {
@@ -101,8 +103,8 @@
 			&--body {
 				display: flex;
 				align-items: flex-end;
-				height: 591px;
-				padding: 50px 65px;
+				height: 598px;
+				padding: 65px 72px;
 				background-color: #191919;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -110,6 +112,7 @@
 			}
 
 			&-title {
+				padding-bottom: 3px;
 				@extend %fontAndaleMonoMTStd;
 				font-size: 32px;
 				color: #FFFFFF;
@@ -117,7 +120,7 @@
 			}
 
 			&-subtitle {
-				padding-bottom: 50px;
+				padding-bottom: 46px;
 				font-weight: 500;
 				font-size: 18px;
 				color: #FFFFFF;
@@ -126,22 +129,21 @@
 		}
 
 		&-right {
-			width: 100%;
-			max-width: 40%;
-			padding-top: 134px;
+			width: calc(100% - 113px);
+			padding-top: 133px;
 
 			&--body {
 				position: relative;
-				height: 589px;
+				height: 588px;
 				background-color: #191919;
 			}
 
 			&--footer {
 				position: relative;
 				width: 100%;
-				max-width: 48%;
+				max-width: calc(50% - 1px);
 				min-height: 311px;
-				padding: 36px 36px 34px 44px;
+				padding: 39px 36px 32px 43px;
 				background-color: #191919;
 				border-bottom: 1px solid #F2905F;
 			}
@@ -153,11 +155,12 @@
 		max-width: 100%;
 		height: auto;
 
-
 		&-1 {
+			position: relative;
+			left: -22px;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: 102px;
+			margin-bottom: 98px;
 		}
 	}
 
@@ -175,7 +178,7 @@
 		flex-direction: column;
 
 		&-item {
-			padding-bottom: 27px;
+			padding-bottom: 24px;
 		}
 
 		&-link {
@@ -189,7 +192,7 @@
 				transform: translateX(100%);
 				content: '';
 				position: absolute;
-				top: calc(100% + 5px);
+				top: calc(100% + 9px);
 				left: 0;
 				width: 100%;
 				height: 1px;
@@ -225,11 +228,11 @@
 			}
 
 			span {
-				padding-bottom: 5px;
 				@extend %fontAndaleMonoMTStd;
 				font-size: 13px;
 				color: rgba(#FFFFFF, 0.3);
 				letter-spacing: 0.08px;
+				line-height: 1.25;
 			}
 
 			p {
@@ -256,12 +259,11 @@
 			font-size: 18px;
 			color: #FFFFFF;
 			letter-spacing: 0.11px;
-			line-height: 87.39px;
 		}
 
 		.icon-font {
-			margin-left: 20px;
-			font-size: 22px;
+			margin-left: 26px;
+			font-size: 24px;
 			backface-visibility: hidden;
 			transform-origin: center;
 			@include transition(transform);
@@ -269,7 +271,7 @@
 	}
 
 	&__desc {
-		padding-bottom: 30px;
+		padding-bottom: 37px;
 		font-size: 14px;
 		color: #FFFFFF;
 		letter-spacing: 0.09px;
@@ -287,7 +289,7 @@
 		justify-content: center;
 		width: 43px;
 		height: 43px;
-		margin-left: 25px;
+		margin-left: 30px;
 		border-radius: 50%;
 		background-color: transparent;
 		border: 1px solid rgba(#FFFFFF, 0.5);
@@ -370,9 +372,12 @@
 			align-items: center;
 			justify-content: space-between;
 			width: 100%;
-			padding: 0 40px 30px;
+			padding: 0 16px 30px 40px;
 
 			> div {
+				&:nth-of-type(1) {
+					padding-left: 5px;
+				}
 				&:nth-of-type(2) {
 					width: 100px;
 				}
@@ -381,9 +386,9 @@
 
 		&-title {
 			@extend %fontAndaleMonoMTStd;
-			font-size: 32px;
+			font-size: 30px;
 			color: #FFFFFF;
-			letter-spacing: 0.2px;
+			letter-spacing: 0px;
 		}
 
 		&-btn {

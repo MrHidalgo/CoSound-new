@@ -45,7 +45,7 @@
 			left: 0;
 			height: calc(100% - 101px);
 			padding-top: 0;
-			transform: translateX(calc(100% - 79px));
+			transform: translateX(calc(100% - 88px));
 			@include transition(transform 0.4s);
 
 			&.is-open {
@@ -69,7 +69,7 @@
 
 			p {
 				white-space: nowrap;
-				transform: rotate(-90deg);
+				transform: rotate(-90deg) translate(-9px, 10px);
 				@extend %fontAndaleMonoMTStd;
 				font-size: 52px;
 				color: #ffffff;
@@ -79,7 +79,7 @@
 
 		&-content {
 			height: 100%;
-			padding: 126px 158px;
+			padding: 120px 158px;
 			background-image: url('../img/img-tabs-bg--light.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -93,7 +93,7 @@
 
 		&-item {
 			&:not(:last-of-type) {
-				padding-bottom: 29px;
+				padding-bottom: 25px;
 			}
 
 			span {
@@ -157,7 +157,7 @@
 			height: auto;
 			margin-left: auto;
 			margin-right: auto;
-			transform: translateY(120px);
+			transform: translate(41px, 120px);
 		}
 	}
 

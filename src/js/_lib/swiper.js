@@ -50,6 +50,8 @@ const initSwiper = () => {
 					return (d < 10) ? '0' + d.toString() : d.toString();
 				}
 
+				$('.main__info span').text(numberAppend(current));
+
 				return '<span class="' + current + '">' + numberAppend(current) + '</span>';
 			}
 		},
