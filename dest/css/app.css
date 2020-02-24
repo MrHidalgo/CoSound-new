@@ -16,7 +16,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow-long:before, .icon-arrow-right:before, .icon-corner:before, .icon-eye:before, .icon-facebook:before, .icon-instagram:before, .icon-like:before, .icon-menu:before, .icon-mute:before, .icon-pause:before, .icon-play:before, .icon-share:before, .icon-sound:before, .icon-twitter:before, .icon-youtube:before {
+.icon-arrow-long:before, .icon-arrow-right:before, .icon-close:before, .icon-corner:before, .icon-eye:before, .icon-facebook:before, .icon-instagram:before, .icon-like:before, .icon-menu:before, .icon-mute:before, .icon-pause:before, .icon-play:before, .icon-share:before, .icon-sound:before, .icon-twitter:before, .icon-youtube:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,79 +27,84 @@
   text-transform: none;
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
+/* line 83, src/scss/_generated/_spriteFont.scss */
 .icon-arrow-long:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
+/* line 83, src/scss/_generated/_spriteFont.scss */
 .icon-arrow-right:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-corner:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-close:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-eye:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-corner:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-facebook:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-eye:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-instagram:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-facebook:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-like:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-instagram:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-menu:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-like:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-mute:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-menu:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-pause:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-mute:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-play:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-pause:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-share:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-play:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-sound:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-share:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-twitter:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-sound:before {
   content: "";
 }
 
-/* line 80, src/scss/_generated/_spriteFont.scss */
-.icon-youtube:before {
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-twitter:before {
   content: "";
+}
+
+/* line 83, src/scss/_generated/_spriteFont.scss */
+.icon-youtube:before {
+  content: "";
 }
 
 @font-face {
@@ -3018,6 +3023,132 @@ picture {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* line 3, src/scss/_components/homepage/_menu.scss */
+.menu {
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* line 15, src/scss/_components/homepage/_menu.scss */
+.menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* line 21, src/scss/_components/homepage/_menu.scss */
+.menu.is-open .menu__wrapper {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+/* line 24, src/scss/_components/homepage/_menu.scss */
+.menu.is-open .menu__wrapper-1 {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+/* line 27, src/scss/_components/homepage/_menu.scss */
+.menu.is-open .menu__wrapper-2 {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+/* line 32, src/scss/_components/homepage/_menu.scss */
+.menu.is-open .menu__content {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* line 40, src/scss/_components/homepage/_menu.scss */
+.menu__wrapper {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(45, 49, 54, 0.975);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+/* line 47, src/scss/_components/homepage/_menu.scss */
+.menu__wrapper-1 {
+  -webkit-transform: translate(-100%, -100%);
+      -ms-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+/* line 51, src/scss/_components/homepage/_menu.scss */
+.menu__wrapper-2 {
+  -webkit-transform: translate(100%, 100%);
+      -ms-transform: translate(100%, 100%);
+          transform: translate(100%, 100%);
+}
+
+/* line 56, src/scss/_components/homepage/_menu.scss */
+.menu__content {
+  opacity: 1;
+  visibility: hidden;
+  -webkit-transition-delay: 0.45s;
+       -o-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* line 63, src/scss/_components/homepage/_menu.scss */
+.menu__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* line 73, src/scss/_components/homepage/_menu.scss */
+.menu__close .icon-font {
+  color: #ffffff;
+  font-size: 25px;
 }
 
 /* line 3, src/scss/_components/about/_main.scss */

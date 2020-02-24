@@ -26,4 +26,11 @@ const initHamburger = () => {
 
   });
 
+	$('[mobile-close-js]').on("click", (ev) => {
+    $('[hamburger-js]').removeClass("is-active");
+    $("[mobile-block-js]").removeClass("is-open");
+
+		$("html, body").removeClass("is-hideScroll");
+  });
+
 };

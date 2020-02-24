@@ -209,6 +209,7 @@
 
 		// lib
 		initSwiper();
+		initHamburger();
 		// ==========================================
 
 		// callback

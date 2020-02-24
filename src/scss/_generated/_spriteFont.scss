@@ -33,44 +33,47 @@
 	@if $filename == arrow-right {
 		$char: "\E002";
 	}
-	@if $filename == corner {
+	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == eye {
+	@if $filename == corner {
 		$char: "\E004";
 	}
-	@if $filename == facebook {
+	@if $filename == eye {
 		$char: "\E005";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook {
 		$char: "\E006";
 	}
-	@if $filename == like {
+	@if $filename == instagram {
 		$char: "\E007";
 	}
-	@if $filename == menu {
+	@if $filename == like {
 		$char: "\E008";
 	}
-	@if $filename == mute {
+	@if $filename == menu {
 		$char: "\E009";
 	}
-	@if $filename == pause {
+	@if $filename == mute {
 		$char: "\E00A";
 	}
-	@if $filename == play {
+	@if $filename == pause {
 		$char: "\E00B";
 	}
-	@if $filename == share {
+	@if $filename == play {
 		$char: "\E00C";
 	}
-	@if $filename == sound {
+	@if $filename == share {
 		$char: "\E00D";
 	}
-	@if $filename == twitter {
+	@if $filename == sound {
 		$char: "\E00E";
 	}
-	@if $filename == youtube {
+	@if $filename == twitter {
 		$char: "\E00F";
+	}
+	@if $filename == youtube {
+		$char: "\E010";
 	}
 
 	@return $char;
@@ -93,6 +96,10 @@
 }
 .icon-arrow-right {
 	@include icon(arrow-right);
+
+}
+.icon-close {
+	@include icon(close);
 
 }
 .icon-corner {
