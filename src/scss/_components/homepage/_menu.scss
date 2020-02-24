@@ -1,18 +1,19 @@
 // SECTION :: START
 
 .menu {
-	z-index: 1050;
+	z-index: -1;
 	opacity: 0;
 	visibility: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: flex;
 	width: 100vw;
+	display: flex;
 	height: 100vh;
 	@include transition(opacity 0.4s, visibility 0.4s);
 
 	&.is-open {
+		z-index: 1055;
 		opacity: 1;
 		visibility: visible;
 		@include transition(opacity 0.4s, visibility 0.4s);

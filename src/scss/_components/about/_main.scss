@@ -118,7 +118,11 @@
 	}
 
 	.main__btn {
+		display: none;
 		top: calc(100% - 83px);
+		@include adaptive(767) {
+			display: flex;
+		}
 	}
 }
 

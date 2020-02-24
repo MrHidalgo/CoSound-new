@@ -1606,7 +1606,7 @@ picture {
   z-index: 2;
   position: relative;
   width: 100%;
-  max-width: 1500px;
+  max-width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -4035,17 +4035,17 @@ picture {
 
 /* line 3, src/scss/_components/homepage/_menu.scss */
 .menu {
-  z-index: 1050;
+  z-index: -1;
   opacity: 0;
   visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100vw;
   height: 100vh;
   -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
@@ -4054,6 +4054,7 @@ picture {
 
 /* line 15, src/scss/_components/homepage/_menu.scss */
 .menu.is-open {
+  z-index: 1055;
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
@@ -4061,7 +4062,7 @@ picture {
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
-/* line 21, src/scss/_components/homepage/_menu.scss */
+/* line 22, src/scss/_components/homepage/_menu.scss */
 .menu.is-open .menu__wrapper {
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
@@ -4070,21 +4071,21 @@ picture {
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
-/* line 24, src/scss/_components/homepage/_menu.scss */
+/* line 25, src/scss/_components/homepage/_menu.scss */
 .menu.is-open .menu__wrapper-1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-/* line 27, src/scss/_components/homepage/_menu.scss */
+/* line 28, src/scss/_components/homepage/_menu.scss */
 .menu.is-open .menu__wrapper-2 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-/* line 32, src/scss/_components/homepage/_menu.scss */
+/* line 33, src/scss/_components/homepage/_menu.scss */
 .menu.is-open .menu__content {
   opacity: 1;
   visibility: visible;
@@ -4093,7 +4094,7 @@ picture {
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
-/* line 40, src/scss/_components/homepage/_menu.scss */
+/* line 41, src/scss/_components/homepage/_menu.scss */
 .menu__wrapper {
   position: relative;
   width: 50%;
@@ -4106,21 +4107,21 @@ picture {
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
-/* line 47, src/scss/_components/homepage/_menu.scss */
+/* line 48, src/scss/_components/homepage/_menu.scss */
 .menu__wrapper-1 {
   -webkit-transform: translate(-100%, -100%);
       -ms-transform: translate(-100%, -100%);
           transform: translate(-100%, -100%);
 }
 
-/* line 51, src/scss/_components/homepage/_menu.scss */
+/* line 52, src/scss/_components/homepage/_menu.scss */
 .menu__wrapper-2 {
   -webkit-transform: translate(100%, 100%);
       -ms-transform: translate(100%, 100%);
           transform: translate(100%, 100%);
 }
 
-/* line 56, src/scss/_components/homepage/_menu.scss */
+/* line 57, src/scss/_components/homepage/_menu.scss */
 .menu__content {
   opacity: 1;
   visibility: hidden;
@@ -4132,7 +4133,7 @@ picture {
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
-/* line 63, src/scss/_components/homepage/_menu.scss */
+/* line 64, src/scss/_components/homepage/_menu.scss */
 .menu__close {
   position: absolute;
   top: 10px;
@@ -4153,7 +4154,7 @@ picture {
   height: 40px;
 }
 
-/* line 73, src/scss/_components/homepage/_menu.scss */
+/* line 74, src/scss/_components/homepage/_menu.scss */
 .menu__close .icon-font {
   color: #ffffff;
   font-size: 25px;
@@ -4354,8 +4355,19 @@ picture {
 
 /* line 120, src/scss/_components/about/_main.scss */
 .about-main .main__btn {
+  display: none;
   top: -webkit-calc(100% - 83px);
   top: calc(100% - 83px);
+}
+
+@media screen and (max-width: 767px) {
+  /* line 120, src/scss/_components/about/_main.scss */
+  .about-main .main__btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @-webkit-keyframes animateLine1 {
