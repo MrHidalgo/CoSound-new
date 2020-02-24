@@ -1,7 +1,11 @@
 // SECTION :: START
 
 .tabs {
+	overflow: hidden;
 	padding-bottom: 155px;
+	@include adaptive(1023) {
+		padding-bottom: 125px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -24,6 +28,12 @@
 			width: 100%;
 			max-width: 723px;
 			padding-top: 24px;
+			@include adaptive(1279) {
+				max-width: 350px;
+			}
+			@include adaptive(1023) {
+				max-width: 300px;
+			}
 		}
 	}
 
@@ -43,10 +53,17 @@
 			position: absolute;
 			top: 101px;
 			left: 0;
+			width: 100%;
 			height: calc(100% - 101px);
 			padding-top: 0;
-			transform: translateX(calc(100% - 88px));
+			transform: translateX(calc(100% - 158px));
 			@include transition(transform 0.4s);
+			@include adaptive(1279) {
+				transform: translateX(calc(100% - 125px));
+			}
+			@include adaptive(1023) {
+				transform: translateX(calc(100% - 100px));
+			}
 
 			&.is-open {
 				transform: translateX(0);
@@ -66,6 +83,14 @@
 			height: 586px;
 			background-color: #191919;
 			box-shadow: -35px 53px 53px 0 rgba(0,0,0,0.20);
+			@include adaptive(1279) {
+				width: 125px;
+				height: 506px;
+			}
+			@include adaptive(1023) {
+				width: 100px;
+				height: 450px;
+			}
 
 			p {
 				white-space: nowrap;
@@ -74,6 +99,16 @@
 				font-size: 52px;
 				color: #ffffff;
 				letter-spacing: 0;
+				@include adaptive(1439) {
+					transform: rotate(-90deg) translate(-9px, 8px);
+					font-size: 45px;
+				}
+				@include adaptive(1279) {
+					font-size: 42px;
+				}
+				@include adaptive(1023) {
+					font-size: 36px;
+				}
 			}
 		}
 
@@ -84,6 +119,12 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+			@include adaptive(1279) {
+				padding: 75px 100px;
+			}
+			@include adaptive(1023) {
+				padding: 45px 55px;
+			}
 		}
 	}
 
@@ -121,6 +162,9 @@
 		backface-visibility: hidden;
 		transform-origin: center;
 		@include transition(box-shadow, transform);
+		@include adaptive(1279) {
+			display: none;
+		}
 
 		&.is-change {
 			transform: rotate(180deg);
@@ -150,6 +194,13 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		@include adaptive(1279) {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			max-height: unset;
+			height: 100%;
+		}
 
 		img {
 			display: block;
@@ -158,6 +209,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			transform: translate(41px, 120px);
+			@include adaptive(1023) {
+				transform: translate(0, 120px);
+			}
 		}
 	}
 

@@ -1,6 +1,7 @@
 // SECTION :: START
 
 .connect {
+	overflow: hidden;
 	padding-top: 10px;
 
 	&__title {
@@ -12,6 +13,20 @@
 		letter-spacing: 8.8px;
 		text-align: center;
 		line-height: 97px;
+		@include adaptive(1439) {
+			padding-left: 0;
+			font-size: 86px;
+		}
+		@include adaptive(1365) {
+			font-size: 76px;
+		}
+		@include adaptive(1279) {
+			font-size: 66px;
+			line-height: 74px;
+		}
+		@include adaptive(1023) {
+			font-size: 56px;
+		}
 
 		span {
 			@extend %fontAndaleMono;
@@ -29,6 +44,7 @@
 		color: #000000;
 		letter-spacing: 0;
 		text-align: center;
+		@include adaptive(1439) {}
 	}
 
 	&__btn {
@@ -72,6 +88,9 @@
 			max-width: 100%;
 			height: auto;
 			transform: translateX(-174px);
+			@include adaptive(1279) {
+				transform: translateX(0);
+			}
 		}
 	}
 }

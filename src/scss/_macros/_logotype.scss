@@ -25,6 +25,9 @@
 			&__image {
 				width: 100%;
 				max-width: 272px;
+				@include adaptive(1023) {
+					max-width: 200px;
+				}
 			}
 		}
 	}
