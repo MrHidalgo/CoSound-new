@@ -4207,31 +4207,34 @@ picture {
 @media screen and (max-width: 767px) {
   /* line 16, src/scss/_components/about/_main.scss */
   .about-main__wrapper {
+    left: -15px;
+    width: -webkit-calc(100% - 20px);
+    width: calc(100% - 20px);
     padding: 40px 20px;
   }
 }
 
-/* line 33, src/scss/_components/about/_main.scss */
+/* line 35, src/scss/_components/about/_main.scss */
 .about-main__wrapper-left, .about-main__wrapper-right {
   position: relative;
   width: 50%;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 33, src/scss/_components/about/_main.scss */
+  /* line 35, src/scss/_components/about/_main.scss */
   .about-main__wrapper-left, .about-main__wrapper-right {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 42, src/scss/_components/about/_main.scss */
+  /* line 44, src/scss/_components/about/_main.scss */
   .about-main__wrapper-left {
     display: none;
   }
 }
 
-/* line 49, src/scss/_components/about/_main.scss */
+/* line 51, src/scss/_components/about/_main.scss */
 .about-main__title {
   font-size: 143px;
   color: #fff;
@@ -4241,7 +4244,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 49, src/scss/_components/about/_main.scss */
+  /* line 51, src/scss/_components/about/_main.scss */
   .about-main__title {
     font-size: 123px;
     line-height: 117px;
@@ -4249,7 +4252,7 @@ picture {
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 49, src/scss/_components/about/_main.scss */
+  /* line 51, src/scss/_components/about/_main.scss */
   .about-main__title {
     font-size: 103px;
     line-height: 107px;
@@ -4257,7 +4260,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 49, src/scss/_components/about/_main.scss */
+  /* line 51, src/scss/_components/about/_main.scss */
   .about-main__title {
     font-size: 93px;
     line-height: normal;
@@ -4265,20 +4268,20 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 49, src/scss/_components/about/_main.scss */
+  /* line 51, src/scss/_components/about/_main.scss */
   .about-main__title {
     font-size: 83px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 49, src/scss/_components/about/_main.scss */
+  /* line 51, src/scss/_components/about/_main.scss */
   .about-main__title {
     font-size: 60px;
   }
 }
 
-/* line 76, src/scss/_components/about/_main.scss */
+/* line 78, src/scss/_components/about/_main.scss */
 .about-main__line {
   position: absolute;
   background-color: #FFFFFF;
@@ -4297,7 +4300,7 @@ picture {
           animation-timing-function: ease-in-out;
 }
 
-/* line 86, src/scss/_components/about/_main.scss */
+/* line 88, src/scss/_components/about/_main.scss */
 .about-main__line-1 {
   top: -20px;
   left: -7px;
@@ -4308,7 +4311,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 86, src/scss/_components/about/_main.scss */
+  /* line 88, src/scss/_components/about/_main.scss */
   .about-main__line-1 {
     top: 0;
     left: 0;
@@ -4316,13 +4319,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 86, src/scss/_components/about/_main.scss */
+  /* line 88, src/scss/_components/about/_main.scss */
   .about-main__line-1 {
     width: 3px;
   }
 }
 
-/* line 101, src/scss/_components/about/_main.scss */
+/* line 103, src/scss/_components/about/_main.scss */
 .about-main__line-2 {
   right: 21px;
   bottom: -18px;
@@ -4335,7 +4338,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 101, src/scss/_components/about/_main.scss */
+  /* line 103, src/scss/_components/about/_main.scss */
   .about-main__line-2 {
     right: 0;
     bottom: 0;
@@ -4343,10 +4346,16 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 101, src/scss/_components/about/_main.scss */
+  /* line 103, src/scss/_components/about/_main.scss */
   .about-main__line-2 {
     height: 3px;
   }
+}
+
+/* line 120, src/scss/_components/about/_main.scss */
+.about-main .main__btn {
+  top: -webkit-calc(100% - 83px);
+  top: calc(100% - 83px);
 }
 
 @-webkit-keyframes animateLine1 {
